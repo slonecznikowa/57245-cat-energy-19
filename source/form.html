@@ -29,20 +29,28 @@
   </header>
   <main class="page-main">
     <section class="form">
-      <h1 class="form__title">Подбор программы</h1>
+      <h1 class="title title-lg form__title">Подбор программы</h1>
       <p class="form__desc">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="form-main" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="form-main__group">
-          <legend class="form-main__title visually-hidden">Личные данные кота</legend>
-          <label class="form-main__label" for="name">Имя:*</label>
-          <input type="text" name="name" id="name" value="Барсик" required>
-          <label class="form-main__label" for="weight">Вес (кг):*</label>
-          <input type="number" name="weight" id="weight" value="7" required>
-          <label class="form-main__label" for="age">Возраст (лет):</label>
-          <input type="number" name="age" id="age" value="7">
+          <legend class="title title-sm form-main__title visually-hidden">Личные данные кота</legend>
+          <ul>
+            <li class="form-main__item">
+              <label class="form-main__label" for="name">Имя:*</label>
+              <input class="form-main__input" type="text" name="name" id="name" value="Барсик" required>
+            </li>
+            <li class="form-main__item">
+              <label class="form-main__label" for="weight">Вес (кг):*</label>
+              <input class="form-main__input" type="number" name="weight" id="weight" value="7" required>
+            </li>
+            <li class="form-main__item">
+              <label class="form-main__label" for="age">Возраст (лет):</label>
+              <input class="form-main__input" type="number" name="age" id="age" value="7">
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="form-main__group">
-          <legend class="form-main__title visually-hidden">Вид программы</legend>
+          <legend class="title title-sm form-main__title visually-hidden">Вид программы</legend>
             <ul>
               <li class="form-main__item">
                 <input class="form-main__input form-main__input--radiobutton visually-hidden" type="radio" name="losing-weight" id="filter-losing-weight" checked>
@@ -59,18 +67,24 @@
             </ul>
         </fieldset>
         <fieldset class="form-main__group">
-          <legend class="form-main__title">Контактные данные (владельца кота)</legend>
-          <label class="form-main__label" for="email">E-mail:*</label>
-          <input type="email" name="email" id="email" value="kuklachev@gmail.com" required>
-          <label class="form-main__label" for="phone">Телефон:*</label>
-          <input type="tel" name="phone" id="phone" value="8 (960) 900-60-90" required>
+          <legend class="title title-sm form-main__title">Контактные данные (владельца кота)</legend>
+          <ul>
+            <li class="form-main__item">
+              <label class="form-main__label" for="email">E-mail:*</label>
+              <input class="form-main__input" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
+            </li>
+            <li class="form-main__item">
+              <label class="form-main__label" for="phone">Телефон:*</label>
+              <input class="form-main__input" type="tel" name="phone" id="phone" value="8 (960) 900-60-90" required>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="form-main__group">
-          <legend class="form-main__title">Комментарий</legend>
+          <legend class="title title-sm form-main__title">Комментарий</legend>
           <textarea name="comment" id="comment">Расскажите обо всех повадках кота</textarea>
         </fieldset>
         <fieldset class="form-main__group">
-          <legend class="form-main__title">Дополнительно</legend>
+          <legend class="title title-sm form-main__title">Дополнительно</legend>
             <ul>
               <li class="form-main__item">
                 <input class="form-main__input form-main__input--checkbox visually-hidden" type="checkbox" name="sweetener" id="filter-sweetener" value="" checked>
@@ -96,7 +110,7 @@
     </section>
     <section class="contacts">
       <h2 class="contacts__title visually-hidden">Контакты</h2>
-      <p class="contacts__note">Приглашаем к сотрудничеству дилеров!</p>
+      <strong class="contacts__note">Приглашаем к сотрудничеству дилеров!</strong>
       <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       <img class="contacts__map" src="https://via.placeholder.com/320x400" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
     </section>
