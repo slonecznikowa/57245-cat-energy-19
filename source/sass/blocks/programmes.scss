@@ -1,0 +1,63 @@
+.programmes {
+  margin: 0 0 12px 0;
+}
+.programmes__list {
+  @include ul-reset();
+}
+.programmes__item {
+  background-color: $background-color-secondary;
+  margin: 0 0 20px 0;
+  padding: 22px 20px;
+}
+.programmes__title {
+  color: $color-primary--dark;
+  margin: 0 0 36px 0;
+  padding: 17px 0 0 72px;
+  position: relative;
+  text-transform: uppercase;
+  &:before {
+    @include pseudo();
+    @include size(50px, 50px);
+    background-color: $background-color-primary;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+  }
+  &:after {
+    @include pseudo();
+  }
+}
+.programmes__item--losing-weight .programmes__title:after {
+  @include size(35px, 49px);
+  background-image: url(../img/icon-cat-slim.svg);
+  top: -2px;
+  left: 8px;
+}
+.programmes__item--gaining-weight .programmes__title:after {
+  @include size(67px, 28px);
+  background-image: url(../img/icon-cat-pro.svg);
+  top: 11px;
+  left: -9px;
+}
+.programmes__description {
+  border-bottom: 1px solid $border-gray--dark;
+  padding: 0 0 23px 0;
+  margin: 0 0 20px 0;
+}
+.programmes__button {
+  color: $color-primary--dark;
+  line-height: 1;
+  padding: 0 37px 0 0;
+  position: relative;
+  &:before {
+    @include pseudo();
+    @include size(25px, 12px);
+    background-image: url(../img/icon-right-arrow-long.svg);
+    background-size: contain;
+    top: 0;
+    right: 0;
+  }
+}
+
+
+

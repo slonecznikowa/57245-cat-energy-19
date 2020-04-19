@@ -1,0 +1,31 @@
+.banner {
+  background-color: $background-color-primary--dark;
+  background-image: linear-gradient(to top, $background-color-tertiary 175px, transparent 175px), url(../img/index-background-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom, center bottom 175px;
+}
+.banner__title {
+  color: $color-secondary;
+  margin: 0 0 19px 0;
+  padding: 29px 0 0 0;
+  text-align: center;
+}
+.banner__desc {
+  @include font($font-family-primary, 400, 14px, 1.29, $color-secondary);
+  display: block;
+  margin: 0 0 29px 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.banner__img {
+  display: block;
+  margin: 0 auto 3px auto;
+}
+.banner__button {
+  color: $color-secondary;
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+
+

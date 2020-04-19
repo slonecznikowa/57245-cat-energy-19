@@ -1,0 +1,15 @@
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-list__item {
+  border-top: 1px solid $border-gray;
+  padding: 21px 0 20px 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.menu-list__link {
+  @include font($font-family-primary, 500, 20px, 1, $color-primary--dark);
+  text-decoration: none;
+}
