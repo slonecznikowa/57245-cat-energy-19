@@ -11,10 +11,6 @@ body {
   color: $color-primary;
 }
 
-.container {
-  padding: 0 20px;
-}
-
 .visually-hidden {
   @include visually-hidden;
 }
