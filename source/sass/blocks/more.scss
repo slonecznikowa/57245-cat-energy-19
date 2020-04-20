@@ -12,6 +12,7 @@
   position: relative;
   padding-top: 56px;
   display: block;
+
   &::after {
     @include pseudo();
     top: 0;

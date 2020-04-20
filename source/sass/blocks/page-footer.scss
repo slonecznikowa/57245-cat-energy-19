@@ -52,7 +52,9 @@
 .social__link {
   display: block;
   position: relative;
+
   @include size(62px, 62px);
+
   &::before {
     @include size(62px, 62px);
     @include pseudo();
@@ -61,17 +63,17 @@
   }
 }
 
-.social__link--vkontakte:before {
+.social__link--vkontakte::before {
   background: url("../img/icon-vk.svg") center no-repeat;
   background-size: 22px 12px;
 }
 
-.social__link--instagram:before {
+.social__link--instagram::before {
   background: url("../img/icon-insta.svg") center no-repeat;
   background-size: 17px 17px;
 }
 
-.social__link--facebook:before {
+.social__link--facebook::before {
   background: url("../img/icon-fb.svg") center no-repeat;
   background-size: 10px 19px;
 }

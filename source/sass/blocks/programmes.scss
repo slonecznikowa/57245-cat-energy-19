@@ -18,6 +18,7 @@
   padding: 17px 0 0 72px;
   position: relative;
   text-transform: uppercase;
+
   &::before {
     @include pseudo();
     @include size(50px, 50px);
@@ -26,19 +27,20 @@
     top: 0;
     left: 0;
   }
+
   &::after {
     @include pseudo();
   }
 }
 
-.programmes__item--losing-weight .programmes__title:after {
+.programmes__item--losing-weight .programmes__title::after {
   @include size(35px, 49px);
   background-image: url("../img/icon-cat-slim.svg");
   top: -2px;
   left: 8px;
 }
 
-.programmes__item--gaining-weight .programmes__title:after {
+.programmes__item--gaining-weight .programmes__title::after {
   @include size(67px, 28px);
   background-image: url("../img/icon-cat-pro.svg");
   top: 11px;
@@ -56,6 +58,7 @@
   line-height: 1;
   padding: 0 37px 0 0;
   position: relative;
+
   &::before {
     @include pseudo();
     @include size(25px, 12px);
