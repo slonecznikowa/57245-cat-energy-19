@@ -9,7 +9,7 @@
 }
 
 .catalog__list {
-  @include ul-reset();
+  @include ul-reset;
 }
 
 .catalog__item-image {

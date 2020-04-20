@@ -14,7 +14,7 @@
   display: block;
 
   &::after {
-    @include pseudo();
+    @include pseudo;
     top: 0;
     left: 50%;
     margin-left: -15px;

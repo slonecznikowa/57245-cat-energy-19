@@ -4,7 +4,7 @@
 }
 
 .properties__list {
-  @include ul-reset();
+  @include ul-reset;
 }
 
 .properties__item {
@@ -18,7 +18,7 @@
   &::before,
   &::after {
     @include size(60px, 60px);
-    @include pseudo();
+    @include pseudo;
     top: 0;
     left: 0;
   }
