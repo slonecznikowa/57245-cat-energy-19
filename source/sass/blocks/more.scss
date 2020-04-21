@@ -1,0 +1,41 @@
+
+.more {
+  text-align: center;
+  border-top: 1px solid $border-gray-light;
+  border-bottom: 1px solid $border-gray-light;
+  padding: 25px 20px;
+}
+
+.more__title {
+  color: $color-primary--dark;
+  text-transform: uppercase;
+  position: relative;
+  padding-top: 56px;
+  display: block;
+
+  &::after {
+    @include pseudo;
+    top: 0;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.2;
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.more__button {
+  width: 100%;
+  color: $color-primary;
+  margin-top: 8px;
+}
+
+.more__text {
+  font-size: 12px;
+  line-height: 1.33;
+  margin: 10px;
+}

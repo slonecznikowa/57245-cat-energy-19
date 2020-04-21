@@ -1,0 +1,11 @@
+.main-nav__toggle {
+  @include size(25px, 19px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../img/mobile-menu.png") $background-color-tertiary no-repeat center;
+  border: none;
+  box-sizing: content-box;
+  font-size: 0;
+  padding: 26px 20px 20px 20px;
+}

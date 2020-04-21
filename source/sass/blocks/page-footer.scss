@@ -1,0 +1,21 @@
+
+.page-footer {
+  background-color: $background-color-secondary;
+  padding: 39px 0 22px 0;
+}
+
+.page-footer__logo {
+  display: block;
+  margin: 0 0 31px 0;
+  text-align: center;
+}
+
+.page-footer__logo-image {
+  @include size(128px, 24px);
+}
+
+.page-footer__social {
+  border-top: 1px solid $border-gray--dark;
+  border-bottom: 1px solid $border-gray--dark;
+  margin: 0 0 18px 0;
+}

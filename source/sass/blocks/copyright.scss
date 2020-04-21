@@ -1,0 +1,16 @@
+.copyright {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright__logo {
+  object-fit: cover;
+}
+
+.copyright__link {
+  font-size: 16px;
+  color: $color-primary;
+  line-height: 1;
+  text-decoration: none;
+}
