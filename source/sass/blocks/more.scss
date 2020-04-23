@@ -24,7 +24,8 @@
     @include pseudo;
     top: 0;
     left: 50%;
-    margin-left: calc( -30px / 2);
+    margin-left: calc(-30px / 2);
+
     @include size(30px, 30px);
     opacity: 0.2;
     background-image: url("../img/icon-plus-mobile.svg");
@@ -43,10 +44,11 @@
     &::after {
       @include size(60px, 60px);
       top: 25px;
-      margin-left: calc( -60px / 2);
+      margin-left: calc(-60px / 2);
     }
   }
 }
+
 .more__button {
   width: 100%;
   color: $color-primary;

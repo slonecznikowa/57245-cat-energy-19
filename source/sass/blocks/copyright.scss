@@ -5,8 +5,8 @@
 }
 
 .copyright__logo {
-  object-fit: cover;
   @include size(27px, 34px);
+  object-fit: cover;
 }
 
 @media (min-width: $tablet-width) {

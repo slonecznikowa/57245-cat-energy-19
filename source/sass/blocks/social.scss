@@ -12,6 +12,7 @@
 .social__link {
   display: block;
   position: relative;
+
   @include size(62px, 62px);
 
   &::before {

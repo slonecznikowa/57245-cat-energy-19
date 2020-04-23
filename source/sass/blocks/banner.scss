@@ -62,9 +62,9 @@
 }
 
 .banner__img {
+  @include size(280px, 270px);
   display: block;
   margin: 0 auto 3px auto;
-  @include size(280px, 270px);
 }
 
 @media (min-width: $tablet-width) {

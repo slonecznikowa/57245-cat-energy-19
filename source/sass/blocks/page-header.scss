@@ -24,9 +24,10 @@
       @include pseudo;
       top: 0;
       right: 0;
+
       @include size(50%, 696px);
       background-color: $background-color-primary--dark;
-      background-image: url(../img/index-background-desktop@1x.jpg);
+      background-image: url("../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-position: right;
     }

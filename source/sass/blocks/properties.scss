@@ -64,6 +64,7 @@
       top: -12px;
       right: 76px;
       z-index: -1;
+
       @include font($font-family-primary, 400, 281px, 235px, $color-secondary--dark);
     }
   }
