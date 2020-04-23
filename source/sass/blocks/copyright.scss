@@ -6,6 +6,13 @@
 
 .copyright__logo {
   object-fit: cover;
+  @include size(27px, 34px);
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__logo {
+    margin-left: 23px;
+  }
 }
 
 .copyright__link {

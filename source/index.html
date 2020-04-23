@@ -7,34 +7,40 @@
     <title>Cat Energy - Главная</title>
   </head>
   <body>
-    <header class="page-header">
-      <a class="page-header__logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Cat Energy - магазин корма для котов">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list menu-list">
-            <li class="menu-list__item">
-              <a class="menu-list__link">Главная</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
+    <header class="page-header page-header--index">
+      <div class="container">
+        <div class="page-header__wrapper">
+          <a class="page-header__logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Cat Energy - магазин корма для котов">
+          </a>
+          <nav class="main-nav">
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list menu-list">
+                <li class="menu-list__item">
+                  <a class="menu-list__link menu-list__link--index">Главная</a>
+                </li>
+                <li class="menu-list__item">
+                  <a class="menu-list__link menu-list__link--index" href="catalog.html">Каталог продукции</a>
+                </li>
+                <li class="menu-list__item">
+                  <a class="menu-list__link menu-list__link--index" href="form.html">Подбор программы</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
-      </nav>
+      </div>
     </header>
     <main class="page-main">
       <section class="banner">
         <div class="container">
-          <h1 class="title title--lg banner__title">Функциональное питание для котов</h1>
-          <span class="banner__desc">Занялся собой? Займись котом!</span>
-          <img class="banner__img" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Функциональное питание для котов">
-          <a class="button button--green banner__button" href="form.html">Подобрать программу</a>
+          <div class="banner__wrapper">
+            <h1 class="title title--lg banner__title">Функциональное питание для котов</h1>
+            <span class="banner__desc">Занялся собой? Займись котом!</span>
+            <img class="banner__img" src="img/index-can-mobile@1x.png" alt="Функциональное питание для котов">
+            <a class="button button--green banner__button" href="form.html">Подобрать программу</a>
+          </div>
         </div>
       </section>
       <section class="programmes">
@@ -58,10 +64,18 @@
         <div class="container">
           <h2 class="title title--lg properties__title">Как это работает</h2>
           <ul class="properties__list">
-            <li class="properties__item properties__item--nutrients"><span>Функциональное питание содержит только полезные питательные вещества.</span></li>
-            <li class="properties__item properties__item--composition"><span>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</span></li>
-            <li class="properties__item properties__item--mealtimes"><span>Замените один-два приема обычной еды на наше функциональное питание.</span></li>
-            <li class="properties__item properties__item--period"><span>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</span></li>
+            <li class="properties__item properties__item--nutrients">
+              <span class="properties__text">Функциональное питание содержит только полезные питательные вещества.</span>
+            </li>
+            <li class="properties__item properties__item--composition">
+              <span class="properties__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</span>
+            </li>
+            <li class="properties__item properties__item--mealtimes">
+              <span class="properties__text">Замените один-два приема обычной еды на наше функциональное питание.</span>
+            </li>
+            <li class="properties__item properties__item--period">
+              <span class="properties__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</span>
+            </li>
           </ul>
         </div>
       </section>
@@ -109,23 +123,25 @@
     </main>
     <footer class="page-footer">
       <div class="container">
-        <a class="page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Cat Energy - магазин корма для котов">
-        </a>
-        <ul class="page-footer__social social">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://vk.com/htmlacademy">Мы в Instagram</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://vk.com/htmlacademy">Мы в Facebook</a>
-          </li>
-        </ul>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Разработано в HTML Academy">
+        <div class="page-footer__wrapper">
+          <a class="page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Cat Energy - магазин корма для котов">
+          </a>
+          <ul class="page-footer__social social">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://vk.com/htmlacademy">Мы в Instagram</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://vk.com/htmlacademy">Мы в Facebook</a>
+            </li>
+          </ul>
+          <div class="page-footer__copyright copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <img class="copyright__logo" src="img/htmlacademy.svg" alt="Разработано в HTML Academy">
+          </div>
         </div>
       </div>
     </footer>

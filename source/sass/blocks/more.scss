@@ -1,9 +1,16 @@
-
 .more {
   text-align: center;
   border-top: 1px solid $border-gray-light;
   border-bottom: 1px solid $border-gray-light;
   padding: 25px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .more {
+    background-color: $background-color-tertiary;
+    border-right: 1px solid $border-gray-light;
+    border-left: 1px solid $border-gray-light;
+  }
 }
 
 .more__title {
@@ -17,9 +24,8 @@
     @include pseudo;
     top: 0;
     left: 50%;
-    margin-left: -15px;
-    width: 30px;
-    height: 30px;
+    margin-left: calc( -30px / 2);
+    @include size(30px, 30px);
     opacity: 0.2;
     background-image: url("../img/icon-plus-mobile.svg");
     background-size: contain;
@@ -28,14 +34,34 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .more__title {
+    padding-top: 166px;
+    max-width: 140px;
+    margin: 0 auto;
+
+    &::after {
+      @include size(60px, 60px);
+      top: 25px;
+      margin-left: calc( -60px / 2);
+    }
+  }
+}
 .more__button {
   width: 100%;
   color: $color-primary;
-  margin-top: 8px;
 }
 
 .more__text {
   font-size: 12px;
   line-height: 1.33;
   margin: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .more__text {
+    font-size: 16px;
+    max-width: 170px;
+    margin: 28px auto 56px auto;
+  }
 }

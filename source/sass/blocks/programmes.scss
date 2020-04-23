@@ -2,14 +2,41 @@
   margin: 0 0 12px 0;
 }
 
+@media (min-width: $tablet-width) {
+  .programmes {
+    margin: 0 0 51px 0;
+  }
+}
+
 .programmes__list {
   @include ul-reset;
+}
+
+@media (min-width: $desktop-width) {
+  .programmes__list {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .programmes__item {
   background-color: $background-color-secondary;
   margin: 0 0 20px 0;
   padding: 22px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .programmes__item {
+    padding: 62px 62px 62px 52px;
+    margin: 0 0 30px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programmes__item {
+    width: 570px;
+    box-sizing: border-box;
+  }
 }
 
 .programmes__title {
@@ -33,24 +60,103 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .programmes__title {
+    padding-top: 19px;
+    padding-left: 0;
+
+    &::before {
+      @include size(200px, 200px);
+      left: auto;
+      right: 0;
+      top: 31px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programmes__title {
+    padding-left: 164px;
+    margin: 0 0 81px 0;
+
+    &::before {
+      @include size(100px, 100px);
+      left: 0;
+      right: auto;
+      top: -15px;
+    }
+  }
+}
+
 .programmes__item--losing-weight .programmes__title::after {
   @include size(35px, 49px);
   background-image: url("../img/icon-cat-slim.svg");
+  background-repeat: no-repeat;
   top: -2px;
   left: 8px;
+}
+
+@media (min-width: $tablet-width) {
+  .programmes__item--losing-weight .programmes__title::after {
+    @include size(141px, 194px);
+    left: auto;
+    right: 31px;
+    top: 23px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programmes__item--losing-weight .programmes__title::after {
+    @include size(71px, 97px);
+    left: 14px;
+    right: auto;
+    top: -22px;
+  }
 }
 
 .programmes__item--gaining-weight .programmes__title::after {
   @include size(67px, 28px);
   background-image: url("../img/icon-cat-pro.svg");
+  background-repeat: no-repeat;
   top: 11px;
   left: -9px;
+}
+
+@media (min-width: $tablet-width) {
+  .programmes__item--gaining-weight .programmes__title::after {
+    @include size(268px, 113px);
+    left: auto;
+    top: 84px;
+    right: -32px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programmes__item--gaining-weight .programmes__title::after {
+    @include size(134px, 57px);
+    left: -22px;
+    right: auto;
+    top: 13px;
+  }
 }
 
 .programmes__description {
   border-bottom: 1px solid $border-gray--dark;
   padding: 0 0 23px 0;
   margin: 0 0 20px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .programmes__description {
+    max-width: 375px;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programmes__description {
+    max-width: 100%;
+  }
 }
 
 .programmes__button {

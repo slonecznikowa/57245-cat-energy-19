@@ -2,9 +2,55 @@
   border-bottom: 1px solid $border-gray;
 }
 
+@media (min-width: $tablet-width) {
+  .page-header {
+    border: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .page-header--index {
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      top: 0;
+      right: 0;
+      @include size(50%, 696px);
+      background-color: $background-color-primary--dark;
+      background-image: url(../img/index-background-desktop@1x.jpg);
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+  }
+}
+
 .page-header__logo {
   display: block;
   padding: 11px 0 11px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo {
+    padding-top: 53px;
+  }
 }
 
 .page-header__logo-image {
