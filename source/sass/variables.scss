@@ -14,6 +14,11 @@ $border-gray--dark:               #d9d9d9; /*217 217 217 */
 $color-primary:                   #444444;
 $color-primary--dark:             #111111;
 $color-secondary:                 #ffffff;
+$color-secondary--dark:           #f2f2f2;
 
 /*Шрифт*/
 $font-family-primary:             "Oswald", "Arial", sans-serif;
+
+/*Размеры*/
+$tablet-width:                    768px;
+$desktop-width:                   1440px;

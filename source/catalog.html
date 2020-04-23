@@ -8,26 +8,31 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Cat Energy - магазин корма для котов">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list menu-list">
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="index.html">Главная</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
+      <div class="container">
+        <div class="page-header__wrapper">
+          <a class="page-header__logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Cat Energy - магазин корма для котов">
+          </a>
+          <nav class="main-nav">
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list menu-list">
+                <li class="menu-list__item">
+                  <a class="menu-list__link" href="index.html">Главная</a>
+                </li>
+                <li class="menu-list__item">
+                  <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
+                </li>
+                <li class="menu-list__item">
+                  <a class="menu-list__link" href="form.html">Подбор программы</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
-      </nav>
+      </div>
     </header>
+
     <main class="page-main">
       <section class="catalog">
         <div class="container container--no-padding">
@@ -222,12 +227,12 @@
               </div>
               <a href="make-order.html" class="button button--green catalog__button">Заказать</a>
             </li>
+            <li class="catalog__item more">
+              <strong class="title title--sm more__title">Показать еще 100500 товаров</strong>
+              <p class="more__text">На самом деле вкусов гораздо больше!</p>
+              <a class="button button--grey more__button" href="new-items.html">Показать все</a>
+            </li>
           </ul>
-          <div class="more">
-            <strong class="title title--sm more__title">Показать еще 100500 товаров</strong>
-            <p class="more__text">На самом деле вкусов гораздо больше!</p>
-            <a class="button button--grey more__button" href="new-items.html">Показать все</a>
-          </div>
         </div>
       </section>
       <section class="additional-catalog">
@@ -291,23 +296,25 @@
     </main>
     <footer class="page-footer">
       <div class="container">
-        <a class="page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Cat Energy - магазин корма для котов">
-        </a>
-        <ul class="page-footer__social social">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://vk.com/htmlacademy">Мы в Instagram</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://vk.com/htmlacademy">Мы в Facebook</a>
-          </li>
-        </ul>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Разработано в HTML Academy">
+        <div class="page-footer__wrapper">
+          <a class="page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Cat Energy - магазин корма для котов">
+          </a>
+          <ul class="page-footer__social social">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://vk.com/htmlacademy">Мы в Instagram</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://vk.com/htmlacademy">Мы в Facebook</a>
+            </li>
+          </ul>
+          <div class="page-footer__copyright copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <img class="copyright__logo" src="img/htmlacademy.svg" alt="Разработано в HTML Academy">
+          </div>
         </div>
       </div>
     </footer>

@@ -1,49 +1,105 @@
+@media (min-width: $tablet-width) {
+  .properties {
+    border-bottom: 1px solid $border-gray;
+  }
+}
+
 .properties__title {
   margin: 0 0 35px 0;
   color: $color-primary--dark;
+}
+
+@media (min-width: $tablet-width) {
+  .properties__title {
+    margin: 0 0 63px 0;
+  }
 }
 
 .properties__list {
   @include ul-reset;
 }
 
+@media (min-width: $tablet-width) {
+  .properties__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .properties__item {
   align-items: center;
   display: flex;
-  height: 60px;
+  min-height: 60px;
   margin: 0 0 20px 0;
   padding: 0 0 0 80px;
   position: relative;
 
-  &::before,
-  &::after {
+  &::before {
     @include size(60px, 60px);
     @include pseudo;
+    background: center no-repeat $background-color-primary;
     top: 0;
     left: 0;
   }
+}
 
-  &::before {
-    background-color: $background-color-primary;
+@media (min-width: $tablet-width) {
+  .properties__item {
+    display: block;
+    width: 324px;
+    padding: 0;
+    min-height: 235px;
+    counter-increment: item_number;
+    margin: 0 0 55px 0;
+
+    &::before {
+      @include size(80px, 80px);
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: counter(item_number);
+      top: -12px;
+      right: 76px;
+      z-index: -1;
+
+      @include font($font-family-primary, 400, 281px, 235px, $color-secondary--dark);
+    }
   }
+}
 
-  &::after {
-    object-fit: contain;
+@media (min-width: $desktop-width) {
+  .properties__item {
+    width: 250px;
+
+    &::after {
+      right: 0;
+    }
   }
 }
 
-.properties__item--nutrients::after {
-  background: url("../img/advantage-leaf@1x.png") center no-repeat;
+.properties__item--nutrients::before {
+  background-image: url("../img/advantage-leaf@1x.png");
 }
 
-.properties__item--composition::after {
-  background: url("../img/advantage-powder@1x.png") center no-repeat;
+.properties__item--composition::before {
+  background-image: url("../img/advantage-powder@1x.png");
 }
 
-.properties__item--mealtimes::after {
-  background: url("../img/advantage-dining@1x.png") center no-repeat;
+.properties__item--mealtimes::before {
+  background-image: url("../img/advantage-dining@1x.png");
 }
 
-.properties__item--period::after {
-  background: url("../img/advantage-clock@1x.png") center no-repeat;
+.properties__item--period::before {
+  background-image: url("../img/advantage-clock@1x.png");
+}
+
+@media (min-width: $tablet-width) {
+  .properties__text {
+    margin-top: 117px;
+    display: block;
+    width: 250px;
+  }
 }
