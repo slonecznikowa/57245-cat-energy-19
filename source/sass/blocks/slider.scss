@@ -1,0 +1,137 @@
+
+.slider__toggle *,
+.slider__toggle *:before,
+.slider__toggle *:after {
+  box-sizing: border-box;
+}
+
+.slider__list {
+  @include ul-reset;
+  display: flex;
+  margin-bottom: 35px;
+}
+
+.slider__item {
+  text-align: center;
+}
+
+.slider__img--before {
+  @include size(311px, 232px);
+}
+
+.slider__img--after {
+  @include size(251px, 240px);
+}
+
+.slider__toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__caption {
+  @include font(Oswald, 400, 16px, 14px, $color-primary--dark);
+  text-transform: uppercase;
+}
+
+.slider__toggle {
+  position: relative;
+  margin: 0 18px;
+}
+
+.slider__input {
+  @include visually-hidden;
+}
+
+.slider__label {
+  user-select: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.slider__switch {
+  @include size(84px, 14px);
+  position: relative;
+  border: solid 1px $border-gray--darken;
+  font-size: 0;
+  border-radius: 6px;
+  padding: 4px 6px;
+  margin: 0 auto;
+  transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+  background: $background-color-tertiary;
+}
+
+.slider__switch:before {
+  content: attr(data-checked);
+  position: absolute;
+  top: 0;
+  left: 42px;
+  width: 42px;
+  line-height: 14px;
+}
+
+.slider__switch:after {
+  content: attr(data-unchecked);
+  position: absolute;
+  z-index: 5;
+  background: $background-color-primary;
+  transform: translate3d(0, 0, 0);
+  border-radius: 3px;
+  top: 50%;
+  left: 6px;
+  width: 35px;
+  line-height: 6px;
+  margin-top: -3px;
+  transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slider__input[disabled] + .slider__label {
+  pointer-events: none;
+}
+
+.slider__input:focus + .slider__label .slider__switch,
+.slider__input:hover + .slider__label .slider__switch {
+  background-color: $background-color-tertiary;
+}
+
+.slider__input:checked + .slider__label .slider__switch {
+  background-color: $background-color-tertiary;
+}
+.slider__input:checked + .slider__label .slider__switch:before {
+  content: attr(data-unchecked);
+  left: 0;
+}
+.slider__input:checked + .slider__label .slider__switch:after {
+  content: attr(data-checked);
+  transform: translate3d(42px, 0, 0);
+  left: 0;
+}
+
+.slider__input:checked:focus + .slider__label .slider__switch,
+.slider__input:checked:hover + .slider__label .slider__switch {
+  background-color: $background-color-tertiary;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

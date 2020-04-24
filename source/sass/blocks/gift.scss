@@ -1,0 +1,28 @@
+.gift {
+  @include size(280px, 289px);
+  display: block;
+  background-color: $background-color-primary--dark;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  display: flex;
+  margin-bottom: 35px;
+}
+
+.gift__text {
+  @include font(Arial, 400, 16px, 1.25, $color-secondary);
+  max-width: 159px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 190px;
+
+  &::before {
+    @include pseudo;
+    @include size(56px, 61px);
+    object-fit: contain;
+    background-image: url("../img/icon-gift.svg");
+    left: 50%;
+    margin-left: calc(-56px / 2);
+    top: 65px;
+  }
+}

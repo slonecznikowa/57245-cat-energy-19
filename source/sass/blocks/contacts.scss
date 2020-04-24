@@ -1,0 +1,31 @@
+.contacts--index {
+  background-color: $background-color-tertiary;
+}
+
+.contacts--inner {
+  background-color: $background-color-secondary;
+}
+
+.contacts__wrapper {
+  padding: 31px 20px 26px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts__note {
+  text-transform: uppercase;
+  @include font(Oswald, 400, 16px, 1.25, $color-primary--dark);
+}
+
+.contacts__address {
+  max-width: 262px;
+  line-height: 1.43;
+  margin: 0;
+}
+
+.contacts__map {
+  @include size(100%, 400px);
+  object-fit: contain;
+  max-width: 100%;
+}
