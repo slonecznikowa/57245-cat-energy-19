@@ -4,14 +4,6 @@
   padding-bottom: 39px;
 }
 
-
-
-
-
-
-
-
-
 .example__title {
   color: $color-primary--dark;
   margin-top: 0;
@@ -33,7 +25,7 @@
 
 .example__stats-item {
   width: 124px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $border-gray--darken;
   border-radius: 3px;
   position: relative;
   padding: 9px 0 21px 0;
@@ -62,4 +54,3 @@
   margin-top: 0;
   margin-bottom: 44px
 }
-
