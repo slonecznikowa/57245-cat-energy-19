@@ -15,6 +15,7 @@
 
 .contacts__note {
   text-transform: uppercase;
+
   @include font(Oswald, 400, 16px, 1.25, $color-primary--dark);
 }
 

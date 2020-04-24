@@ -1,7 +1,7 @@
 
 .slider__toggle *,
-.slider__toggle *:before,
-.slider__toggle *:after {
+.slider__toggle *::before,
+.slider__toggle *::after {
   box-sizing: border-box;
 }
 
@@ -63,7 +63,7 @@
   background: $background-color-tertiary;
 }
 
-.slider__switch:before {
+.slider__switch::before {
   content: attr(data-checked);
   position: absolute;
   top: 0;
@@ -72,7 +72,7 @@
   line-height: 14px;
 }
 
-.slider__switch:after {
+.slider__switch::after {
   content: attr(data-unchecked);
   position: absolute;
   z-index: 5;
@@ -99,11 +99,13 @@
 .slider__input:checked + .slider__label .slider__switch {
   background-color: $background-color-tertiary;
 }
-.slider__input:checked + .slider__label .slider__switch:before {
+
+.slider__input:checked + .slider__label .slider__switch::before {
   content: attr(data-unchecked);
   left: 0;
 }
-.slider__input:checked + .slider__label .slider__switch:after {
+
+.slider__input:checked + .slider__label .slider__switch::after {
   content: attr(data-checked);
   transform: translate3d(42px, 0, 0);
   left: 0;

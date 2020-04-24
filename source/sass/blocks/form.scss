@@ -110,8 +110,8 @@
 }
 
 .form-main__input--radiobutton:checked + .form-main__label--radiobutton::before {
-    background-color: $background-color-primary;
-    background-clip: content-box;
+  background-color: $background-color-primary;
+  background-clip: content-box;
 }
 
 .form-main__group-textarea {
@@ -147,10 +147,10 @@
 }
 
 .form-main__input--checkbox:checked + .form-main__label--checkbox::before {
-    background-image: url(../img/icon-tick.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 70%;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 70%;
 }
 
 .form-main__wrapper-button {
