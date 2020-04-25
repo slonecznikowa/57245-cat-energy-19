@@ -1,3 +1,56 @@
-.example__list {
+.example {
+  background: $background-color-secondary;
+  padding-top: 33px;
+  padding-bottom: 39px;
+}
+
+.example__title {
+  color: $color-primary--dark;
+  margin-top: 0;
+  margin-bottom: 33px;
+}
+
+.example__desc {
+  margin-top: 0;
+  margin-bottom: 37px;
+}
+
+.example__stats {
   @include ul-reset;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.example__stats-item {
+  width: 124px;
+  border: 1px solid $border-gray--darken;
+  border-radius: 3px;
+  position: relative;
+  padding: 9px 0 21px 0;
+  background: border-box;
+}
+
+.example__stats-value {
+  @include font(Oswald, 400, 24px, 1, $color-primary--dark);
+  display: block;
+}
+
+.example__stats-field {
+  @include font(Arial, 400, 12px, 1, $color-primary);
+  position: absolute;
+  bottom: -11px;
+  left: 50%;
+  width: 87px;
+  margin-left: calc(-87px / 2);
+  background: $background-color-secondary;
+}
+
+.example__expenses {
+  @include font(Oswald, 400, 14px, 1.43, $color-primary--dark);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 44px;
 }
