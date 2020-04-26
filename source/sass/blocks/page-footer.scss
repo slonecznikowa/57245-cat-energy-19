@@ -1,17 +1,53 @@
 .page-footer {
   background-color: $background-color-secondary;
-  padding: 39px 0 22px 0;
+  padding: 31px 0 22px 0;
   box-sizing: border-box;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    padding: 44px 0;
+    padding-top: 69px;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    padding-top: 0;
+  }
+}
+
+.page-footer__top {
+  margin-top: 0;
+  margin-bottom: 39px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__top {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__top {
+    position: relative;
+  }
+}
+
+.page-footer--index {
+  background-color: $background-color-tertiary;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__bottom {
+    background-color: $background-color-secondary;
+    padding-top: 64px;
+    padding-bottom: 62px;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .page-footer__wrapper {
+  .page-footer__bottom-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
