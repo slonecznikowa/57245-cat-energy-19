@@ -34,6 +34,12 @@
   text-transform: uppercase;
 }
 
+@media (min-width: $tablet-width) {
+  .slider__caption {
+    font-size: 20px;
+  }
+}
+
 .slider__toggle {
   position: relative;
   margin: 0 18px;

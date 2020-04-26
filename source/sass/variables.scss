@@ -1,26 +1,28 @@
 /*Цвета фонов*/
-$background-color-primary:        #68b738;
-$background-color-primary--dark:  #63a73a;
-$background-color-secondary:      #f2f2f2;
-$background-color-tertiary:       #ffffff;
+$background-color-primary:          #68b738;
+$background-color-primary--dark:    #63a73a;
+$background-color-secondary--light: #eaeaea; /* 234 234 234 */
+$background-color-secondary:        #f2f2f2; /* 242 242 242 */
+$background-color-tertiary:         #ffffff; /* 255 255 255 */
+
 
 /*Цвета бордеров*/
-$border-gray-light:               #ededed; /*237 237 237 */
-$border-gray:                     #e6e6e6; /*230 230 230 */
-$border-gray--dark:               #d9d9d9; /*217 217 217 */
-$border-gray--darken:             #cdcdcd;
+$border-gray-light:                 #ededed; /* 237 237 237 */
+$border-gray:                       #e6e6e6; /* 230 230 230 */
+$border-gray--dark:                 #d9d9d9; /* 217 217 217 */
+$border-gray--darken:               #cdcdcd;
 
 
 /*Цвета текстов*/
-$color-primary:                   #444444;
-$color-primary--darken:           #222222;
-$color-primary--dark:             #111111;
-$color-secondary:                 #ffffff;
-$color-secondary--dark:           #f2f2f2;
+$color-primary:                     #444444;
+$color-primary--darken:             #222222;
+$color-primary--dark:               #111111;
+$color-secondary:                   #ffffff;
+$color-secondary--dark:             #f2f2f2;
 
 /*Шрифт*/
-$font-family-primary:             "Oswald", "Arial", sans-serif;
+$font-family-primary:               "Oswald", "Arial", sans-serif;
 
-/*Размеры*/
-$tablet-width:                    768px;
-$desktop-width:                   1440px;
+/*Ширины*/
+$tablet-width:                      768px;
+$desktop-width:                     1440px;

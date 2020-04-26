@@ -1,7 +1,28 @@
 .example {
   background: $background-color-secondary;
-  padding-top: 33px;
-  padding-bottom: 39px;
+  padding: 33px 20px 39px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: $background-color-tertiary;
+    padding: 51px 0 0 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    padding-top: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 650px;
+    justify-content: flex-end;
+    background: linear-gradient(to bottom, $background-color-tertiary, $background-color-tertiary 213px, $background-color-secondary 213px, $background-color-secondary);
+    padding-bottom: 73px;
+  }
 }
 
 .example__title {
@@ -10,9 +31,41 @@
   margin-bottom: 33px;
 }
 
+@media (min-width: $tablet-width) {
+  .example__title {
+    margin-bottom: 60px;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__title {
+    position: relative;
+    z-index: 1;
+    padding: 66px 110px;
+    box-sizing: border-box;
+    background: $background-color-tertiary;
+    margin-bottom: 108px;
+  }
+}
+
 .example__desc {
   margin-top: 0;
   margin-bottom: 37px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__desc {
+    margin-bottom: 56px;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__desc {
+    max-width: 435px;
+    padding-left: 110px;
+  }
 }
 
 .example__stats {
@@ -21,6 +74,18 @@
   justify-content: space-between;
   text-align: center;
   margin-bottom: 38px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__stats {
+    margin-bottom: 255px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__stats {
+    margin-bottom: 0;
+  }
 }
 
 .example__stats-item {
@@ -32,9 +97,22 @@
   background: border-box;
 }
 
+@media (min-width: $tablet-width) {
+  .example__stats-item {
+    width: 162px;
+    margin-right: 42px;
+  }
+}
+
 .example__stats-value {
   @include font(Oswald, 400, 24px, 1, $color-primary--dark);
   display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .example__stats-value {
+    font-size: 30px;
+  }
 }
 
 .example__stats-field {
@@ -47,10 +125,68 @@
   background: $background-color-secondary;
 }
 
+@media (min-width: $tablet-width) {
+  .example__stats-field {
+    font-size: 14px;
+    background-color: $background-color-tertiary;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__stats-field {
+    background-color: $background-color-secondary;
+  }
+}
+
 .example__expenses {
   @include font(Oswald, 400, 14px, 1.43, $color-primary--dark);
   text-transform: uppercase;
   text-align: center;
   margin-top: 0;
   margin-bottom: 44px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__expenses {
+    font-size: 20px;
+    max-width: 175px;
+    text-align: right;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__expenses {
+    max-width: inherit;
+    text-align: left;
+    margin-top: 62px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .example__stats-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__stats-wrapper {
+    flex-direction: column;
+    width: 435px;
+    padding-left: 110px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .example__wrapper {
+    background-color: $background-color-secondary--light;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__wrapper {
+    background-color: inherit;
+  }
 }

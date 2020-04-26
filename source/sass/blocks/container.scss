@@ -1,22 +1,20 @@
 .container {
+  display: block;
+  width: 280px; /*Либо auto если макет резиновый*/
   padding: 0 20px;
   margin: 0 auto; /*Временно для выравнивания контейнера фиксированной ширины по центру*/
 }
 
-.container--no-padding {
-  padding: 0;
-}
-
 @media (min-width: $tablet-width) {
   .container {
-    width: 708px;
+    width: 708px; /*Либо auto если макет резиновый*/
     padding: 0 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .container {
-    width: 1220px;
+    width: 1220px; /*Либо auto если макет резиновый*/
     padding: 0 110px;
   }
 }
