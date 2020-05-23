@@ -1,12 +1,12 @@
 .page-footer {
   background-color: $background-color-secondary;
-  padding: 31px 0 22px 0;
+  padding: 28px 0 19px 0;
   box-sizing: border-box;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    padding-top: 69px;
+    padding-top: 61px;
     padding-bottom: 0;
   }
 }
@@ -41,8 +41,15 @@
 @media (min-width: $tablet-width) {
   .page-footer__bottom {
     background-color: $background-color-secondary;
-    padding-top: 64px;
-    padding-bottom: 62px;
+    padding-top: 49px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__bottom {
+    padding-top: 48px;
+    padding-bottom: 36px;
   }
 }
 
@@ -56,7 +63,7 @@
 
 .page-footer__logo {
   display: block;
-  margin: 0 0 31px 0;
+  margin: 0 0 27px 0;
   text-align: center;
 }
 
@@ -73,12 +80,12 @@
 .page-footer__social {
   border-top: 1px solid $border-gray--dark;
   border-bottom: 1px solid $border-gray--dark;
-  margin: 0 0 18px 0;
+  margin: 0 0 17px 0;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer__social {
-    margin: 0;
+    margin: 0 0 0 32px;
     border: none;
   }
 }

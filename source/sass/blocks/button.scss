@@ -1,14 +1,11 @@
 .button {
-  font-size: 16px;
-  line-height: 1.25;
   text-transform: uppercase;
   text-decoration: none;
-  font-family: $font-family-primary;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 11px 22px;
   box-sizing: border-box;
   display: inline-block;
+  @include font($font-family-primary, 400, 16px, 18px, $color-secondary);
 }
 
 @media (min-width: $tablet-width) {

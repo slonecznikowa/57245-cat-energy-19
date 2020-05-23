@@ -4,14 +4,26 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .properties {
+    border-bottom: 1px solid transparent;
+  }
+}
+
 .properties__title {
-  margin: 0 0 35px 0;
+  margin: 0 0 40px 0;
   color: $color-primary--dark;
 }
 
 @media (min-width: $tablet-width) {
   .properties__title {
-    margin: 0 0 63px 0;
+    margin: 0 0 72px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .properties__title {
+    margin: 0 0 71px 0;
   }
 }
 
@@ -51,7 +63,7 @@
     padding: 0;
     min-height: 235px;
     counter-increment: item_number;
-    margin: 0 0 55px 0;
+    margin: 32px 0 50px 0;
 
     &::before {
       @include size(80px, 80px);
@@ -61,22 +73,45 @@
       position: absolute;
       display: block;
       content: counter(item_number);
-      top: -12px;
+      top: -40px;
       right: 76px;
       z-index: -1;
 
-      @include font($font-family-primary, 400, 281px, 235px, $color-secondary--dark);
+    @include font($font-family-primary, 400, 281px, 281px, $color-secondary--dark);
     }
+  }
+
+  .properties__item--nutrients::after {
+    right: 95px;
+  }
+
+  .properties__item--composition::after {
+    right: 79px;
+  }
+
+  .properties__item--mealtimes::after {
+    right: 77px;
+  }
+  .properties__item--period::after {
+    right: 75px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .properties__item {
-    width: 250px;
+    width: 245px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-    &::after {
-      right: 0;
-    }
+  .properties__item--nutrients::after {
+    right: 17px;
+  }
+
+  .properties__item--composition::after,
+  .properties__item--mealtimes::after,
+  .properties__item--period::after {
+    right: 0;
   }
 }
 
@@ -98,8 +133,17 @@
 
 @media (min-width: $tablet-width) {
   .properties__text {
-    margin-top: 117px;
+    margin-top: 112px;
     display: block;
     width: 250px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .properties__item--nutrients,
+  .properties__item--composition {
+    margin-top: 0;
+  }
+}
+
+

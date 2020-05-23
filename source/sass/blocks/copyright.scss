@@ -4,20 +4,26 @@
   justify-content: space-between;
 }
 
+@media (min-width: $tablet-width) {
+  .copyright {
+    margin-top: -10px;
+  }
+}
+
 .copyright__logo {
-  @include size(27px, 34px);
+  @include size(29px, 42px);
   object-fit: cover;
 }
 
 @media (min-width: $tablet-width) {
   .copyright__logo {
-    margin-left: 23px;
+    margin-left: 21px;
   }
 }
 
 .copyright__link {
   font-size: 16px;
   color: $color-primary;
-  line-height: 1;
+  line-height: 18px;
   text-decoration: none;
 }

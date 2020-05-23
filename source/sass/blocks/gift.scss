@@ -15,6 +15,7 @@
     display: flex;
     padding-left: 91px;
     padding-right: 125px;
+    margin-bottom: 77px;
   }
 }
 
@@ -28,12 +29,12 @@
 }
 
 .gift__text {
-  @include font(Arial, 400, 16px, 1.25, $color-secondary);
-  max-width: 159px;
+  @include font($font-family-tertiary, 400, 16px, 1.25, $color-secondary);
   text-align: center;
   margin: 0 auto;
   position: relative;
-  padding-top: 190px;
+  padding-top: 187px;
+  width: 170px;
 
   &::before {
     @include pseudo;
@@ -53,19 +54,23 @@
     margin-right: 0;
     margin-bottom: auto;
     margin-left: auto;
+    text-align: left;
+    max-width: 161px;
+    padding-top: 2px;
 
     &::before {
       left: 0;
-      margin-left: -332px;
-      top: 0;
+      margin-left: -331px;
+      top: -5px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .gift__text {
-    padding-top: 190px;
+    padding-top: 188px;
     margin: 0 auto;
+    text-align: center;
 
     &::before {
       left: 50%;
