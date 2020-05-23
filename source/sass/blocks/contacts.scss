@@ -86,7 +86,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts__city {
-    margin-top:  18px;
+    margin-top: 18px;
   }
 }
 
@@ -95,7 +95,7 @@
   display: block;
 }
 
-@media (min-width: $tablet-width)  {
+@media (min-width: $tablet-width) {
   .contacts__map {
     @include size(100%, 400px);
   }

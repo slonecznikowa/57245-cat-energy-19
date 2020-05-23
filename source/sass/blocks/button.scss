@@ -5,6 +5,7 @@
   padding: 11px 22px;
   box-sizing: border-box;
   display: inline-block;
+
   @include font($font-family-primary, 400, 16px, 18px, $color-secondary);
 }
 

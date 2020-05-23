@@ -77,7 +77,7 @@
       right: 76px;
       z-index: -1;
 
-    @include font($font-family-primary, 400, 281px, 281px, $color-secondary--dark);
+      @include font($font-family-primary, 400, 281px, 281px, $color-secondary--dark);
     }
   }
 
@@ -92,6 +92,7 @@
   .properties__item--mealtimes::after {
     right: 77px;
   }
+
   .properties__item--period::after {
     right: 75px;
   }
