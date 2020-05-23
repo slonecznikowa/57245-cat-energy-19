@@ -5,7 +5,7 @@
 }
 
 .form__desc {
-  @include font(Oswald, 400, 14px, 1.29, $color-primary--dark);
+  @include font($font-family-secondary, 400, 14px, 1.29, $color-primary--dark);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 39px;
@@ -160,7 +160,7 @@
 }
 
 .form-main__label {
-  @include font(Oswald, 400, 16px, 1.13, $color-primary--darken);
+  @include font($font-family-secondary, 400, 16px, 1.13, $color-primary--darken);
   text-transform: uppercase;
   margin-right: 15px;
   flex-shrink: 0;
@@ -179,7 +179,7 @@
   width: 100%;
 
   &::placeholder {
-    @include font(Oswald, 400, 16px, 1.13, $color-primary);
+    @include font($font-family-secondary, 400, 16px, 1.13, $color-primary);
     text-transform: uppercase;
   }
 }
@@ -235,7 +235,7 @@
   border: 1px solid $border-gray--darken;
 
   &::placeholder {
-    @include font(Oswald, 400, 16px, 1.13, $color-primary);
+    @include font($font-family-secondary, 400, 16px, 1.13, $color-primary);
     text-transform: uppercase;
   }
 }

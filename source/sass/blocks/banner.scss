@@ -1,8 +1,8 @@
 .banner {
   background-color: $background-color-primary--dark;
-  background-image: linear-gradient(to top, $background-color-tertiary 175px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
+  background-image: linear-gradient(to top, $background-color-tertiary 198px, transparent 198px), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center bottom, center bottom 175px;
+  background-position: center bottom, center bottom 198px;
 }
 
 @media (min-width: $tablet-width) {
@@ -14,14 +14,14 @@
 @media (min-width: $desktop-width) {
   .banner {
     height: 628px;
-    margin-bottom: 80px;
+    margin-bottom: 18px;
   }
 }
 
 .banner__title {
   color: $color-secondary;
-  margin: 0 0 19px 0;
-  padding: 29px 0 0 0;
+  margin: 0 0 25px 0;
+  padding: 27px 0 0 0;
   text-align: center;
 }
 
@@ -30,9 +30,17 @@
     color: $color-primary--dark;
     max-width: 415px;
     text-align: left;
-    padding-left: 90px;
-    margin: 0 0 33px 0;
+    padding-top: 40px;
+    padding-left: 87px;
+    margin: 0 0 40px 0;
     order: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .banner__title {
+    padding-top: 93px;
+    padding-left: 80px;
   }
 }
 
@@ -43,7 +51,7 @@
 }
 
 .banner__desc {
-  @include font($font-family-primary, 400, 14px, 1.29, $color-secondary);
+  @include font($font-family-primary, 400, 14px, 14px, $color-secondary);
   display: block;
   margin: 0 0 29px 0;
   text-transform: uppercase;
@@ -53,25 +61,36 @@
 @media (min-width: $tablet-width) {
   .banner__desc {
     font-size: 22px;
+    line-height: 22px;
     color: $color-primary--dark;
     text-align: left;
     padding-left: 90px;
-    margin: 0 0 48px 0;
+    margin: 0 0 47px 0;
     order: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .banner__desc {
+    padding-left: 79px;
+    margin: 0 0 51px 0;
   }
 }
 
 .banner__img {
   @include size(280px, 270px);
   display: block;
-  margin: 0 auto 3px auto;
+  margin: 0 auto;
+  margin-bottom: 3px;
 }
 
 @media (min-width: $tablet-width) {
   .banner__img {
-    @include size(100%, auto);
+    @include size(627px, 607px);
     order: 4;
-    margin-top: -100px;
+    margin-top: -103px;
+    margin-left: 80px;
+    margin-bottom: 3px;
   }
 }
 
@@ -80,22 +99,36 @@
     @include size(552px, 499px);
     margin: 0;
     position: absolute;
-    top: 78px;
-    right: 191px;
+    top: 12px;
+    right: 217px;
+    width: 518px;
+    height: 500px;
   }
 }
 
 .banner__button {
   color: $color-secondary;
   width: 100%;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 @media (min-width: $tablet-width) {
   .banner__button {
     width: 245px;
-    margin-left: 90px;
+    margin-left: 89px;
     order: 3;
     z-index: 1;
+    box-sizing: border-box;
+  }
+
+  .button.banner__button {
+    padding: 17px 0;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .banner__button {
+    margin-left: 80px;
   }
 }

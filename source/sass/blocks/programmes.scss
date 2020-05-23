@@ -1,10 +1,16 @@
 .programmes {
-  margin: 0 0 12px 0;
+  margin: 0 0 29px 0;
 }
 
 @media (min-width: $tablet-width) {
   .programmes {
-    margin: 0 0 51px 0;
+    margin: 0 0 46px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programmes {
+    margin: 0 0 43px 0;
   }
 }
 
@@ -21,14 +27,20 @@
 
 .programmes__item {
   background-color: $background-color-secondary;
-  margin: 0 0 20px 0;
-  padding: 22px 20px;
+  margin-top: 23px;
+  padding: 18px 20px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+
+.programmes__item:first-child {
+  margin-top: 0;
 }
 
 @media (min-width: $tablet-width) {
   .programmes__item {
-    padding: 62px 62px 62px 52px;
-    margin: 0 0 30px 0;
+    padding: 62px 62px 40px 52px;
+    margin: 0 0 32px 0;
   }
 }
 
@@ -36,6 +48,7 @@
   .programmes__item {
     width: 570px;
     box-sizing: border-box;
+    padding: 64px 62px 42px 52px;
   }
 }
 
@@ -51,8 +64,8 @@
     @include size(50px, 50px);
     background-color: $background-color-primary;
     border-radius: 50%;
-    top: 0;
-    left: 0;
+    top: 5px;
+    left: 2px;
   }
 
   &::after {
@@ -62,22 +75,23 @@
 
 @media (min-width: $tablet-width) {
   .programmes__title {
-    padding-top: 19px;
+    padding-top: 14px;
     padding-left: 0;
+    margin: 0 0 25px 0;
 
     &::before {
       @include size(200px, 200px);
       left: auto;
       right: 0;
-      top: 31px;
+      top: 29px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .programmes__title {
-    padding-left: 164px;
-    margin: 0 0 81px 0;
+    padding-left: 162px;
+    margin: 0 0 73px 0;
 
     &::before {
       @include size(100px, 100px);
@@ -92,16 +106,16 @@
   @include size(35px, 49px);
   background-image: url("../img/icon-cat-slim.svg");
   background-repeat: no-repeat;
-  top: -2px;
-  left: 8px;
+  top: 3px;
+  left: 10px;
 }
 
 @media (min-width: $tablet-width) {
   .programmes__item--losing-weight .programmes__title::after {
     @include size(141px, 194px);
     left: auto;
-    right: 31px;
-    top: 23px;
+    right: 29px;
+    top: 18px;
   }
 }
 
@@ -118,59 +132,95 @@
   @include size(67px, 28px);
   background-image: url("../img/icon-cat-pro.svg");
   background-repeat: no-repeat;
-  top: 11px;
-  left: -9px;
+  top: 16px;
+  left: -7px;
 }
 
 @media (min-width: $tablet-width) {
   .programmes__item--gaining-weight .programmes__title::after {
     @include size(268px, 113px);
     left: auto;
-    top: 84px;
-    right: -32px;
+    top: 72px;
+    right: -34px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .programmes__item--gaining-weight .programmes__title::after {
     @include size(134px, 57px);
-    left: -22px;
+    left: -19px;
     right: auto;
-    top: 13px;
+    top: 6px;
   }
 }
 
 .programmes__description {
-  border-bottom: 1px solid $border-gray--dark;
-  padding: 0 0 23px 0;
-  margin: 0 0 20px 0;
+  margin: 22px 0;
 }
 
 @media (min-width: $tablet-width) {
   .programmes__description {
-    max-width: 375px;
     border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .programmes__item--losing-weight .programmes__description {
+    max-width: 375px;
+  }
+
+  .programmes__item--gaining-weight .programmes__description {
+    max-width: 343px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .programmes__description {
+    font-size: 15px;
+  }
+
+  .programmes__item--losing-weight .programmes__description,
+  .programmes__item--gaining-weight .programmes__description {
     max-width: 100%;
   }
 }
 
 .programmes__button {
   color: $color-primary--dark;
-  line-height: 1;
-  padding: 0 37px 0 0;
+  line-height: 16px;
   position: relative;
+  padding-top: 19px;
+  padding-right: 44px;
+  padding-bottom: 22px;
+  padding-left: 0;
 
   &::before {
     @include pseudo;
     @include size(25px, 12px);
     background-image: url("../img/icon-right-arrow-long.svg");
     background-size: contain;
-    top: 0;
-    right: 0;
+    top: 24px;
+    right: 7px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .programmes__button {
+    padding-top: 59px;
+
+    &::before {
+      top: 61px;
+      right: -4px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programmes__button {
+    padding-top: 33px;
+
+    &::before {
+      top: 36px;
+    }
   }
 }
