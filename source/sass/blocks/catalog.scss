@@ -27,15 +27,15 @@
 @media (min-width: $desktop-width) {
   .catalog__item {
     width: 245px;
-    padding-top: 135px;
+    padding-top: 138px;
     margin-bottom: 51px;
   }
 }
 
 .catalog__title {
-  margin-top: 27px;
+  margin-top: 15px;
   margin-right: 0;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   margin-left: 0;
   color: $color-primary--dark;
 }
@@ -52,7 +52,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog__title {
-    margin-top: 59px;
+    margin-top: 58px;
     margin-right: 0;
     margin-bottom: 76px;
     margin-left: 0;
@@ -143,7 +143,7 @@
 }
 
 .catalog__item-info {
-  padding-top: 20px;
+  padding-top: 18px;
   padding-bottom: 18px;
   box-sizing: border-box;
 }

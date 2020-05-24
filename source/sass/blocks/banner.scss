@@ -5,6 +5,13 @@
   background-position: center bottom, center bottom 198px;
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .banner {
+    background-image: linear-gradient(to top, $background-color-tertiary 198px, transparent 198px), url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .banner {
     background: none;
@@ -91,6 +98,10 @@
     margin-top: -103px;
     margin-left: 80px;
     margin-bottom: 3px;
+  }
+
+  .banner__picture {
+    order: 4;
   }
 }
 
