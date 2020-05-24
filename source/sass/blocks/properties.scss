@@ -118,18 +118,46 @@
 
 .properties__item--nutrients::before {
   background-image: url("../img/advantage-leaf@1x.png");
+  background-size: 50px 50px;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .properties__item--nutrients::before {
+    background-image: url("../img/advantage-leaf@2x.png");
+  }
 }
 
 .properties__item--composition::before {
   background-image: url("../img/advantage-powder@1x.png");
+  background-size: 50px 50px;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .properties__item--composition::before {
+    background-image: url("../img/advantage-powder@2x.png");
+  }
 }
 
 .properties__item--mealtimes::before {
   background-image: url("../img/advantage-dining@1x.png");
+  background-size: 50px 50px;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .properties__item--mealtimes::before {
+    background-image: url("../img/advantage-dining@2x.png");
+  }
 }
 
 .properties__item--period::before {
   background-image: url("../img/advantage-clock@1x.png");
+  background-size: 50px 50px;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .properties__item--period::before {
+    background-image: url("../img/advantage-clock@2x.png");
+  }
 }
 
 @media (min-width: $tablet-width) {
