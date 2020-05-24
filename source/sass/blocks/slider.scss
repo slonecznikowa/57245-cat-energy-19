@@ -79,8 +79,8 @@
 
 .slider__img--before {
   @include size(320px, 238px);
-    max-width: initial;
-    margin-left: -20px;
+  max-width: initial;
+  margin-left: -20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -136,8 +136,6 @@
 
 @media (min-width: $desktop-width) {
   .slider__toggle-wrapper {
-    padding-bottom: 99px;
-
     padding-bottom: 76px;
   }
 }
