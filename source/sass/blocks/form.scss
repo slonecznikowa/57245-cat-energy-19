@@ -96,15 +96,6 @@
 .form-main__group--comments,
 .form-main__group--additional {
   padding: 0;
-}
-
-.form-main__group--contacts {
-  margin-top: 29px;
-}
-
-.form-main__group--contacts,
-.form-main__group--comments,
-.form-main__group--additional {
 
   &::after {
     content: "";
@@ -115,6 +106,10 @@
     height: 3px;
     background-color: #68b738;
   }
+}
+
+.form-main__group--contacts {
+  margin-top: 29px;
 }
 
 @media (min-width: $tablet-width) {
@@ -132,9 +127,8 @@
     background-color: #68b738;
   }
 
-    &::after {
-      top: 22px;
-    }
+  &::after {
+    top: 22px;
   }
 }
 
@@ -347,7 +341,7 @@
 
 @media (min-width: $tablet-width) {
   .form-main__title-wrapper span {
-    margin-left: 0px;
+    margin-left: 0;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -521,12 +515,6 @@
     padding: 0;
     margin-bottom: 58px;
     padding: 0 40px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .form-main__wrapper-button {
-    padding: 0;
   }
 }
 
