@@ -25,7 +25,7 @@
     flex-wrap: wrap;
     justify-content: center;
     height: 650px;
-    background: linear-gradient(to right,#f2f2f2 75%,#eaeaea 75%);
+    background: linear-gradient(to right, #f2f2f2 75%, #eaeaea 75%);
     position: relative;
 
     &::before {
@@ -74,7 +74,7 @@
     z-index: 1;
     padding: 0 40px;
     padding-top: 52px;
-    padding-left: 0px;
+    padding-left: 0;
     box-sizing: border-box;
     background: $background-color-tertiary;
     margin-bottom: 146px;

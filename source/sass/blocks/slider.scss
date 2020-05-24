@@ -6,7 +6,7 @@
 
 @media (min-width: $tablet-width) {
   .slider {
-    background: linear-gradient(to right,#f2f2f2 50%,#eaeaea 50%);
+    background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 }
 
@@ -20,9 +20,7 @@
 @media (min-width: $tablet-width) {
   .slider__list {
     flex-wrap: nowrap;
-    margin: 0 auto;
     position: relative;
-    margin-bottom: 13px;
     width: 690px;
     margin: 0 auto;
     background-image: linear-gradient(to bottom, $background-color-tertiary, $background-color-tertiary 55%, $background-color-secondary 55%, $background-color-secondary);
