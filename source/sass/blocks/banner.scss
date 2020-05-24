@@ -32,6 +32,10 @@
   text-align: center;
 }
 
+.banner__title.title--lg {
+  line-height: 36px;
+}
+
 @media (min-width: $tablet-width) {
   .banner__title {
     color: $color-primary--dark;
@@ -39,8 +43,12 @@
     text-align: left;
     padding-top: 40px;
     padding-left: 87px;
-    margin: 0 0 40px 0;
+    margin: 0 0 41px 0;
     order: 1;
+  }
+
+  .banner__title.title--lg {
+    line-height: 60px;
   }
 }
 
@@ -67,11 +75,11 @@
 
 @media (min-width: $tablet-width) {
   .banner__desc {
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 20px;
     color: $color-primary--dark;
     text-align: left;
-    padding-left: 90px;
+    padding-left: 88px;
     margin: 0 0 47px 0;
     order: 2;
   }
@@ -88,15 +96,15 @@
   @include size(280px, 270px);
   display: block;
   margin: 0 auto;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 @media (min-width: $tablet-width) {
   .banner__img {
-    @include size(627px, 607px);
+    @include size(708px, 607px);
     order: 4;
     margin-top: -103px;
-    margin-left: 80px;
+    margin-left: 0;
     margin-bottom: 3px;
   }
 
@@ -107,13 +115,11 @@
 
 @media (min-width: $desktop-width) {
   .banner__img {
-    @include size(552px, 499px);
+    @include size(554px, 500px);
     margin: 0;
     position: absolute;
     top: 12px;
     right: 217px;
-    width: 518px;
-    height: 500px;
   }
 }
 
@@ -121,6 +127,14 @@
   color: $color-secondary;
   width: 100%;
   margin-bottom: 23px;
+}
+
+.banner__button.button {
+  padding-top: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 11px;
+  font-size: 14px;
 }
 
 @media (min-width: $tablet-width) {

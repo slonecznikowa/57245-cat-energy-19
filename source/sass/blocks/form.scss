@@ -517,6 +517,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .form-main__wrapper-button {
+    padding: 0;
+  }
+}
+
 .form-main__button {
   width: 100%;
   border: none;
