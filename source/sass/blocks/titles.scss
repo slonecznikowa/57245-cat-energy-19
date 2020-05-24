@@ -1,11 +1,12 @@
 .title {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
+  color: red;
 }
 
 .title--lg {
   font-size: 36px;
-  line-height: 36px;
+  line-height: 60px;
 }
 
 @media (min-width: $tablet-width) {
