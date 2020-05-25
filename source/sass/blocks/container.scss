@@ -2,7 +2,7 @@
   display: block;
   width: 280px; /*Либо auto если макет резиновый*/
   padding: 0 20px;
-  margin: 0 auto; /*Временно для выравнивания контейнера фиксированной ширины по центру*/
+  margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) {

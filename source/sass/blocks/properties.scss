@@ -11,19 +11,28 @@
 }
 
 .properties__title {
-  margin: 0 0 28px 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 28px;
+  margin-left: 0;
   color: $color-primary--dark;
 }
 
 @media (min-width: $tablet-width) {
   .properties__title {
-    margin: 0 0 72px 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 72px;
+    margin-left: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .properties__title {
-    margin: 0 0 71px 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 71px;
+    margin-left: 0;
   }
 }
 
@@ -43,8 +52,14 @@
   align-items: center;
   display: flex;
   min-height: 60px;
-  margin: 0 0 20px 0;
-  padding: 0 0 0 80px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 80px;
   position: relative;
 
   &::before {
@@ -63,7 +78,10 @@
     padding: 0;
     min-height: 235px;
     counter-increment: item_number;
-    margin: 32px 0 50px 0;
+    margin-top: 32px;
+    margin-right: 0;
+    margin-bottom: 50px;
+    margin-left: 0;
 
     &::before {
       @include size(80px, 80px);

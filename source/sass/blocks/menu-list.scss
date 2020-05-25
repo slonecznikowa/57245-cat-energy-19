@@ -6,7 +6,10 @@
 
 .menu-list__item {
   border-top: 1px solid $border-gray;
-  padding: 22px 0 20px 0;
+  padding-top: 22px;
+  padding-right: 0;
+  padding-bottom: 20px;
+  padding-left: 0;
   text-transform: uppercase;
   text-align: center;
 }
@@ -15,13 +18,19 @@
   .menu-list__item {
     border: none;
     margin-left: 0;
-    padding: 45px 0 0;
+    padding-top: 45px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px
   }
 }
 
 @media (min-width: $desktop-width) {
   .menu-list__item {
-    padding: 75px 0 0;
+    padding-top: 75px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px
   }
 }
 

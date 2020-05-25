@@ -20,11 +20,9 @@
 }
 
 .main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
+  @include pseudo;
   top: 0;
   left: 0;
-
   @include size(24px, 2px);
   background-color: #000000;
   box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
@@ -40,8 +38,7 @@
 
   &::before,
   &::after {
-    content: "";
-    position: absolute;
+    @include pseudo;
     left: 0;
 
     @include size(24px, 2px);
