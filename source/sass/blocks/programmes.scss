@@ -194,6 +194,9 @@
   padding-right: 44px;
   padding-bottom: 22px;
   padding-left: 0;
+  border-top: 1px solid $border-gray--dark;
+  width: 100%;
+  text-align: left;
 
   &::before {
     @include pseudo;
@@ -201,17 +204,18 @@
     background-image: url("../img/icon-right-arrow-long.svg");
     background-size: contain;
     top: 24px;
-    right: 7px;
+    left: 98px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .programmes__button {
     padding-top: 59px;
+    border-top: none;
 
     &::before {
       top: 61px;
-      right: -4px;
+      left: 128px;
     }
   }
 }

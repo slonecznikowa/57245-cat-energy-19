@@ -1,13 +1,22 @@
 .page-footer {
   background-color: $background-color-secondary;
-  padding: 28px 0 19px 0;
+  padding: 0 0 19px 0;
   box-sizing: border-box;
+}
+
+.page-footer--index {
+  padding: 28px 0 19px 0;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer {
     padding-top: 61px;
     padding-bottom: 0;
+    background-color: $background-color-secondary;
+  }
+
+  .page-footer--index {
+    background-color: $background-color-tertiary;
   }
 }
 
@@ -32,10 +41,6 @@
   .page-footer__top {
     position: relative;
   }
-}
-
-.page-footer--index {
-  background-color: $background-color-tertiary;
 }
 
 @media (min-width: $tablet-width) {
