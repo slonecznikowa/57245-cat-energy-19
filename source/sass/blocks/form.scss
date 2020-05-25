@@ -426,11 +426,6 @@
   }
 }
 
-
-
-
-
-
 .form-main__group--contacts .form-main__input:invalid + .form-main__input-icon {
   fill: #ff8282;
 }
@@ -439,7 +434,6 @@
 .form-main__group-textarea:invalid {
   border: 2px solid #ff8282;
   padding: 11px;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
