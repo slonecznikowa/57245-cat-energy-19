@@ -29,9 +29,9 @@
     font-size: 20px;
     line-height: 30px;
     max-width: 330px;
-    padding-top: 0px;
+    padding-top: 0;
     padding-right: 40px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     padding-left: 40px;
     margin-bottom: 64px;
   }
@@ -112,7 +112,6 @@
   &::before {
     @media (min-width: $tablet-width) {
       @include pseudo;
-
       @include size(100vw, 3px);
       top: 22px;
       right: 0;
@@ -141,7 +140,6 @@
   &::before {
     @media (min-width: $tablet-width) {
       @include pseudo;
-
       @include size(100vw, 3px);
       top: 22px;
       right: 0;
@@ -165,7 +163,6 @@
 
   &::after {
     @include pseudo;
-
     @include size(100vw, 3px);
 
     top: 14px;
@@ -407,7 +404,8 @@
     border: 1px solid rgba(205, 205, 205, 1);
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     border: 1px solid $border-grayish;
     outline: none;
   }
@@ -437,7 +435,7 @@
 
   @media (min-width: $tablet-width) {
     top: 15px;
-    right: 18px
+    right: 18px;
   }
 }
 
@@ -482,11 +480,13 @@
     border: 1px solid rgb(186, 186, 186);
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     color: rgba(34, 34, 34, 0.3);
   }
 
-  &:active::before, &:focus::before {
+  &:active::before,
+  &:focus::before {
     border: 1px solid rgba(186, 186, 186, 0.3);
   }
 }
@@ -540,7 +540,8 @@
     border: 1px solid rgba(205, 205, 205, 1);
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     border: 1px solid $border-grayish;
     outline: none;
   }
@@ -581,11 +582,13 @@
     border: 1px solid rgb(186, 186, 186);
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     color: rgba(34, 34, 34, 0.3);
   }
 
-  &:active::before, &:focus::before {
+  &:active::before,
+  &:focus::before {
     border: 1px solid rgba(186, 186, 186, 0.3);
   }
 }
@@ -669,14 +672,14 @@
   }
 }
 
-.form-main__input[type=email]:active + svg,
-.form-main__input[type=email]:focus + svg,
-.form-main__input[type=tel]:active + svg,
-.form-main__input[type=tel]:focus + svg {
+.form-main__input[type="email"]:active + svg,
+.form-main__input[type="email"]:focus + svg,
+.form-main__input[type="tel"]:active + svg,
+.form-main__input[type="tel"]:focus + svg {
   fill: rgb(104, 183, 56);
 }
 
-.form-main__input[type=email]:invalid + svg,
-.form-main__input[type=tel]:invalid + svg {
+.form-main__input[type="email"]:invalid + svg,
+.form-main__input[type="tel"]:invalid + svg {
   fill: $color-error;
 }

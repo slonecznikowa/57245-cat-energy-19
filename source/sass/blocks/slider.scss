@@ -128,14 +128,15 @@
     font-size: 20px;
     line-height: 20px;
     margin: 0;
-    border-bottom: 1px dotted rgba(17,17,17,0.23);
+    border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
     padding-bottom: 6px;
 
     &:hover {
-      border-bottom: 1px solid rgba(17,17,17,0.4);
+      border-bottom: 1px solid rgba(17, 17, 17, 0.4);
     }
 
-    &:active, &:focus {
+    &:active,
+    &:focus {
       border-bottom: 1px solid transparent;
     }
   }

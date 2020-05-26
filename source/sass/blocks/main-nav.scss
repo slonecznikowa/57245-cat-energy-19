@@ -28,6 +28,7 @@
     @include pseudo;
     top: 0;
     left: 0;
+
     @include size(24px, 2px);
     background-color: $background-color-fourth;
     box-shadow: 0 8px 0 0 $background-color-fourth, 0 16px 0 0 $background-color-fourth;

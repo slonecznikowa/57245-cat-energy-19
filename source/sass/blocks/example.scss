@@ -25,6 +25,7 @@
       @include pseudo;
       top: 0;
       left: 0;
+
       @include size(100%, 188px);
       background-color: $background-color-tertiary;
     }
@@ -34,9 +35,9 @@
 .example .example__column:first-child {
   @media (min-width: $tablet-width) {
     width: 708px;
-    padding-top: 0px;
+    padding-top: 0;
     padding-right: 30px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     padding-left: 30px;
     margin: 0 auto;
   }
@@ -73,7 +74,7 @@
     z-index: 1;
     padding-top: 52px;
     padding-right: 40px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     padding-left: 0;
     box-sizing: border-box;
     background: $background-color-tertiary;
@@ -120,18 +121,18 @@
   border-radius: 3px;
   position: relative;
   padding-top: 12px;
-  padding-right: 0px;
+  padding-right: 0;
   padding-bottom: 18px;
-  padding-left: 0px;
+  padding-left: 0;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     width: 162px;
     margin-right: 42px;
     padding-top: 18px;
-    padding-right: 0px;
+    padding-right: 0;
     padding-bottom: 22px;
-    padding-left: 0px;
+    padding-left: 0;
   }
 }
 

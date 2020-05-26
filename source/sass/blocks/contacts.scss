@@ -5,9 +5,9 @@
   background-color: $background-color-secondary;
 
   @media (min-width: $tablet-width) {
-    padding-top: 0px;
+    padding-top: 0;
     padding-right: 71px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     padding-left: 71px;
     margin-bottom: 56px;
   }
@@ -101,6 +101,7 @@
     @include pseudo;
     top: 141px;
     left: 50%;
+
     @include size(55px, 53px);
     background: url("../img/map-pin.png");
     background-repeat: no-repeat;
@@ -109,6 +110,7 @@
     @media (min-width: $tablet-width) {
       top: 146px;
       left: 42%;
+
       @include size(124px, 124px);
     }
 
@@ -134,6 +136,7 @@
 .contacts__map iframe {
   position: absolute;
   display: block;
+
   @include size(100%, 100%);
   border: 0;
 }

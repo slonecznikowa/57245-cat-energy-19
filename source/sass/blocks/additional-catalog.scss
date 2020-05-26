@@ -37,7 +37,7 @@
 
   &::after {
     @include pseudo;
-    @include size(100vw, 3px)
+    @include size(100vw, 3px);
     top: 14px;
     left: 0;
     background-color: $background-color-primary;

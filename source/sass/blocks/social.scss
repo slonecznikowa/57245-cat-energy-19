@@ -6,7 +6,7 @@
   padding-top: 25px;
   padding-right: 10px;
   padding-bottom: 14px;
-  padding-left: 0px;
+  padding-left: 0;
   list-style-type: none;
 
   @media (min-width: $tablet-width) {
@@ -32,14 +32,15 @@
   }
 }
 
-.social__icon{
+.social__icon {
   fill: rgb(102, 102, 102);
 
   &:hover {
     fill: rgb(104, 183, 56);
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     fill: rgba(104, 183, 56, 0.3);
   }
 }
@@ -59,6 +60,7 @@
     @include size(23px, 23px);
   }
 }
+
 .social__icon--fb {
   @include size(10px, 19px);
 
