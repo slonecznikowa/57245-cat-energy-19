@@ -2,89 +2,67 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 0;
-  list-style: none;
-}
+  margin: 0;
+  padding-top: 25px;
+  padding-right: 10px;
+  padding-bottom: 14px;
+  padding-left: 0px;
+  list-style-type: none;
 
-.social__link {
-  display: block;
-  position: relative;
-
-  @include size(62px, 62px);
-
-  &::before {
-    @include size(62px, 62px);
-    @include pseudo;
-    top: 0;
-    left: 0;
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+    padding-right: 0;
   }
 }
 
-.social__link--vkontakte::before {
-  background: url("../img/icon-vk.svg");
-  background-repeat: no-repeat;
-  background-size: 22px 12px;
-  background-position-x: 26px;
-  background-position-y: center;
-}
+.social__item {
+  &:nth-child(2) {
+    margin: 0 40px;
 
-@media (min-width: $tablet-width) {
-  .social__link--vkontakte::before {
-    background-size: 30px 16px;
-    background-position-x: 25px;
-    background-position-y: 18px;
+    @media (min-width: $tablet-width) {
+      margin-right: 28px;
+      margin-left: 28px;
+    }
+  }
+
+  &:nth-child(1) {
+    @media (min-width: $tablet-width) {
+      margin-left: 16px;
+    }
   }
 }
 
-@media (min-width: $desktop-width) {
-  .social__link--vkontakte::before {
-    background-position-y: 17px;
+.social__icon{
+  fill: rgb(102, 102, 102);
+
+  &:hover {
+    fill: rgb(104, 183, 56);
+  }
+
+  &:active, &:focus {
+    fill: rgba(104, 183, 56, 0.3);
   }
 }
 
-.social__link--instagram::before {
-  background: url("../img/icon-insta.svg");
-  background-repeat: no-repeat;
-  background-size: 17px 17px;
-  background-position-x: 22px;
-  background-position-y: center;
-}
+.social__icon--vk {
+  @include size(22px, 12px);
 
-@media (min-width: $tablet-width) {
-  .social__link--instagram::before {
-    background-size: 23px 23px;
-    background-position-x: 21px;
-    background-position-y: 16px;
+  @media (min-width: $tablet-width) {
+    @include size(30px, 16px);
   }
 }
 
-@media (min-width: $desktop-width) {
-  .social__link--instagram::before {
-    background-size: 22px 22px;
-    background-position-x: 22px;
-    background-position-y: 14px;
+.social__icon--insta {
+  @include size(16px, 16px);
+
+  @media (min-width: $tablet-width) {
+    @include size(23px, 23px);
   }
 }
+.social__icon--fb {
+  @include size(10px, 19px);
 
-.social__link--facebook::before {
-  background: url("../img/icon-fb.svg");
-  background-repeat: no-repeat;
-  background-size: 10px 19px;
-  background-position-x: 17px;
-  background-position-y: center;
-}
-
-@media (min-width: $tablet-width) {
-  .social__link--facebook::before {
-    background-size: 14px 28px;
-    background-position-x: 11px;
-    background-position-y: 12px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .social__link--facebook::before {
-    background-position-x: 11px;
-    background-position-y: 9px;
+  @media (min-width: $tablet-width) {
+    @include size(14px, 28px);
   }
 }

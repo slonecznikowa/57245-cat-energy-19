@@ -4,10 +4,8 @@
   border-bottom: 1px solid $border-gray-light;
   padding-top: 25px;
   padding-bottom: 24px;
-}
 
-@media (min-width: $tablet-width) {
-  .more {
+  @media (min-width: $tablet-width) {
     background-color: $background-color-tertiary;
     border-right: 1px solid $border-gray-light;
     border-left: 1px solid $border-gray-light;
@@ -36,25 +34,21 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-  }
-}
 
-@media (min-width: $tablet-width) {
-  .more__title {
-    padding-top: 134px;
-    max-width: 140px;
-    margin: 0 auto;
-
-    &::after {
+    @media (min-width: $tablet-width) {
       @include size(60px, 60px);
       top: 25px;
       margin-left: calc(-60px / 2);
     }
   }
-}
 
-@media (min-width: $desktop-width) {
-  .more__title {
+  @media (min-width: $tablet-width) {
+    padding-top: 134px;
+    max-width: 140px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
     padding-top: 132px;
   }
 }
@@ -62,19 +56,15 @@
 .more__button {
   width: 100%;
   color: $color-primary;
-}
 
-@media (min-width: $tablet-width) {
-  .more__button {
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     margin: 0 auto;
     width: 250px;
     display: block;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .more__button {
+  @media (min-width: $desktop-width) {
     width: 170px;
   }
 }
@@ -84,10 +74,8 @@
   line-height: 16px;
   margin-top: 11px;
   margin-bottom: 22px;
-}
 
-@media (min-width: $tablet-width) {
-  .more__text {
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     max-width: 170px;
     margin: 27px auto 87px auto;

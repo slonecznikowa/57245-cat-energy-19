@@ -2,22 +2,20 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-}
-
-@media (min-width: $tablet-width) {
-  .copyright {
-    margin-top: -10px;
-  }
+  position: relative;
 }
 
 .copyright__logo {
-  @include size(29px, 42px);
+  @include size(38px, 47px);
   object-fit: cover;
-}
+  fill: rgb(102, 102, 102);
+  position: absolute;
+  right: -6px;
+  top: 16px;
 
-@media (min-width: $tablet-width) {
-  .copyright__logo {
-    margin-left: 21px;
+  @media (min-width: $tablet-width) {
+    right: -5px;
+    top: -14px;
   }
 }
 
@@ -26,4 +24,22 @@
   color: $color-primary;
   line-height: 18px;
   text-decoration: none;
+  cursor: pointer;
+
+  &:hover + .copyright__logo {
+    fill: rgb(104, 183, 56);
+  }
+
+  &:active + .copyright__logo,
+  &:focus + .copyright__logo {
+    fill: rgba(104, 183, 56, 0.3);
+  }
+
+  &:active, &:focus {
+    color: rgba(68, 68, 68, 0.3)
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 50px;
+  }
 }

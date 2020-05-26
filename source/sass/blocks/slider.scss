@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-@media (min-width: $tablet-width) {
-  .slider {
+.slider {
+  @media (min-width: $tablet-width) {
     background: linear-gradient(to right, $background-color-secondary 50%, $background-color-secondary--light 50%);
   }
 }
@@ -14,23 +14,19 @@
   @include ul-reset;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 31px;
-}
+  margin-bottom: 28px;
 
-@media (min-width: $tablet-width) {
-  .slider__list {
+  @media (min-width: $tablet-width) {
     flex-wrap: nowrap;
     position: relative;
     width: 690px;
     margin: 0 auto;
     background-image: linear-gradient(to bottom, $background-color-tertiary, $background-color-tertiary 55%, $background-color-secondary 55%, $background-color-secondary);
   }
-}
 
-@media (min-width: $desktop-width) {
-  .slider__list {
+  @media (min-width: $desktop-width) {
     width: 650px;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
     margin-left: 0;
     margin-top: -2px;
   }
@@ -39,10 +35,8 @@
 .slider__item {
   text-align: center;
   width: 100%;
-}
 
-@media (min-width: $tablet-width) {
-  .slider__item {
+  @media (min-width: $tablet-width) {
     width: 50%;
     overflow: hidden;
     z-index: 4;
@@ -51,28 +45,26 @@
 
 .slider__item--after {
   display: none;
-}
 
-@media (min-width: $tablet-width) {
-  .slider__item--after {
+  @media (min-width: $tablet-width) {
     display: block;
     width: 100%;
     z-index: 3;
     background: linear-gradient(to bottom, $background-color-tertiary, $background-color-tertiary 167px, $background-color-secondary--light 167px, $background-color-secondary--light);
   }
 
-  .slider__item--before {
-    position: absolute;
-    background: linear-gradient(to bottom, $background-color-tertiary, $background-color-tertiary 167px, $background-color-secondary 167px, $background-color-secondary);
+  @media (min-width: $desktop-width) {
+    background: linear-gradient(to bottom, $background-color-tertiary, $background-color-tertiary 190px, $background-color-secondary--light 190px, $background-color-secondary--light);
   }
 }
 
-@media (min-width: $desktop-width) {
-  .slider__item--after {
-    background: linear-gradient(to bottom, $background-color-tertiary, $background-color-tertiary 190px, $background-color-secondary--light 190px, $background-color-secondary--light);
+.slider__item--before {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    background: linear-gradient(to bottom, $background-color-tertiary, $background-color-tertiary 167px, $background-color-secondary 167px, $background-color-secondary);
   }
 
-  .slider__item--before {
+  @media (min-width: $desktop-width) {
     background: linear-gradient(to bottom, $background-color-tertiary, $background-color-tertiary 190px, $background-color-secondary 190px, $background-color-secondary);
   }
 }
@@ -81,38 +73,30 @@
   @include size(320px, 238px);
   max-width: initial;
   margin-left: -20px;
-}
 
-@media (min-width: $tablet-width) {
-  .slider__img--before {
+  @media (min-width: $tablet-width) {
     @include size(690px, 517px);
     max-width: 690px;
     margin-right: 0;
     margin-left: 7px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .slider__img--before {
+  @media (min-width: $desktop-width) {
     margin-left: -40px;
   }
 }
 
 .slider__img--after {
   @include size(251px, 240px);
-}
 
-@media (min-width: $tablet-width) {
-  .slider__img--after {
+  @media (min-width: $tablet-width) {
     @include size(690px, 517px);
     max-width: 690px;
     margin-right: 0;
     margin-left: 7px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .slider__img--after {
+  @media (min-width: $desktop-width) {
     margin-left: -40px;
   }
 }
@@ -121,44 +105,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-@media (min-width: $tablet-width) {
-  .slider__toggle-wrapper {
-    padding-bottom: 80px;
+  @media (min-width: $tablet-width) {
+    padding-bottom: 68px;
     z-index: 3;
     position: relative;
-    margin-top: 13px;
+    margin-top: 10px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .slider__toggle-wrapper {
-    padding-bottom: 76px;
+  @media (min-width: $desktop-width) {
+    padding-bottom: 68px;
   }
 }
 
 .slider__caption {
-  @include font($font-family-secondary, 400, 16px, 14px, $color-primary--dark);
+  @include font($font-family-secondary, 400, 16px, 20x, $color-primary--dark);
   text-transform: uppercase;
   margin-left: 17px;
   margin-right: 12px;
-}
 
-@media (min-width: $tablet-width) {
-  .slider__caption {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
+    line-height: 20px;
     margin: 0;
+    border-bottom: 1px dotted rgba(17,17,17,0.23);
+    padding-bottom: 6px;
+
+    &:hover {
+      border-bottom: 1px solid rgba(17,17,17,0.4);
+    }
+
+    &:active, &:focus {
+      border-bottom: 1px solid transparent;
+    }
   }
 }
 
 .slider__toggle {
   position: relative;
-}
 
-@media (min-width: $tablet-width) {
-  .slider__toggle {
+  @media (min-width: $tablet-width) {
     position: relative;
+
     @include size(428px, 6px);
     background-color: #dcdcdc;
     border: 0;
@@ -196,17 +184,15 @@
   transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
   background: $background-color-tertiary;
   margin-left: 7px;
-}
 
-@media (min-width: $tablet-width) {
-  .slider__switch {
+  @media (min-width: $tablet-width) {
     display: block;
     position: absolute;
 
     @include size(34px, 34px);
     top: 50%;
     left: 50%;
-    margin-top: -13px;
+    margin-top: -16px;
     margin-left: -16px;
     background-color: $background-color-tertiary;
     border: 1px solid $border-gray--darken;
@@ -214,50 +200,46 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
   }
-}
 
-.slider__switch::before {
-  content: attr(data-checked);
-  position: absolute;
-  top: 0;
-  left: 42px;
-  width: 42px;
-  line-height: 14px;
-}
+  &::before {
+    content: attr(data-checked);
+    position: absolute;
+    top: 0;
+    left: 42px;
+    width: 42px;
+    line-height: 14px;
 
-@media (min-width: $tablet-width) {
-  .slider__switch::before {
-    display: none;
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
-}
 
-.slider__switch::after {
-  content: attr(data-unchecked);
-  position: absolute;
-  z-index: 5;
-  background: $background-color-primary;
-  transform: translate3d(0, 0, 0);
-  border-radius: 3px;
-  top: 50%;
-  left: 6px;
-  width: 35px;
-  line-height: 6px;
-  margin-top: -3px;
-  transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
-}
-
-@media (min-width: $tablet-width) {
-  .slider__switch::after {
-    @include pseudo;
+  &::after {
+    content: attr(data-unchecked);
+    position: absolute;
+    z-index: 5;
+    background: $background-color-primary;
+    transform: translate3d(0, 0, 0);
+    border-radius: 3px;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
+    left: 6px;
+    width: 35px;
+    line-height: 6px;
+    margin-top: -3px;
+    transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
 
-    @include size(8px, 8px);
-    background-color: $background-color-primary;
-    border-radius: 50%;
-    margin: 0;
+    @media (min-width: $tablet-width) {
+      @include pseudo;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+
+      @include size(8px, 8px);
+      background-color: $background-color-primary;
+      border-radius: 50%;
+      margin: 0;
+    }
   }
 }
 

@@ -1,11 +1,9 @@
-@media (min-width: $tablet-width) {
-  .properties {
+.properties {
+  @media (min-width: $tablet-width) {
     border-bottom: 1px solid $border-gray;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .properties {
+  @media (min-width: $desktop-width) {
     border-bottom: 1px solid transparent;
   }
 }
@@ -16,19 +14,15 @@
   margin-bottom: 28px;
   margin-left: 0;
   color: $color-primary--dark;
-}
 
-@media (min-width: $tablet-width) {
-  .properties__title {
+  @media (min-width: $tablet-width) {
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 72px;
     margin-left: 0;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .properties__title {
+  @media (min-width: $desktop-width) {
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 71px;
@@ -38,10 +32,8 @@
 
 .properties__list {
   @include ul-reset;
-}
 
-@media (min-width: $tablet-width) {
-  .properties__list {
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -62,17 +54,7 @@
   padding-left: 80px;
   position: relative;
 
-  &::before {
-    @include size(60px, 60px);
-    @include pseudo;
-    background: center no-repeat $background-color-primary;
-    top: 0;
-    left: 0;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .properties__item {
+  @media (min-width: $tablet-width) {
     display: block;
     width: 324px;
     padding: 0;
@@ -82,12 +64,28 @@
     margin-right: 0;
     margin-bottom: 50px;
     margin-left: 0;
+  }
 
-    &::before {
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    @include size(60px, 60px);
+    @include pseudo;
+    background: center no-repeat $background-color-primary;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
       @include size(80px, 80px);
     }
+  }
 
-    &::after {
+  &::after {
+    @media (min-width: $tablet-width) {
       position: absolute;
       display: block;
       content: counter(item_number);
@@ -98,97 +96,104 @@
       @include font($font-family-primary, 400, 281px, 281px, $color-secondary--dark);
     }
   }
-
-  .properties__item--nutrients::after {
-    right: 95px;
-  }
-
-  .properties__item--composition::after {
-    right: 79px;
-  }
-
-  .properties__item--mealtimes::after {
-    right: 77px;
-  }
-
-  .properties__item--period::after {
-    right: 75px;
-  }
 }
 
-@media (min-width: $desktop-width) {
-  .properties__item {
-    width: 245px;
+.properties__item--nutrients {
+  &::after {
+    @media (min-width: $tablet-width) {
+      right: 95px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 17px;
+    }
+  }
+
+  &::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+    background-size: 50px 50px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
     margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .properties__item--nutrients::after {
-    right: 17px;
-  }
-
-  .properties__item--composition::after,
-  .properties__item--mealtimes::after,
-  .properties__item--period::after {
-    right: 0;
   }
 }
 
-.properties__item--nutrients::before {
-  background-image: url("../img/advantage-leaf@1x.png");
-  background-size: 50px 50px;
-}
+.properties__item--composition {
+  &::after {
+    @media (min-width: $tablet-width) {
+      right: 79px;
+    }
 
-@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .properties__item--nutrients::before {
-    background-image: url("../img/advantage-leaf@2x.png");
+    @media (min-width: $desktop-width) {
+      right: 0;
+    }
+  }
+
+  &::before {
+    background-image: url("../img/advantage-powder@1x.png");
+    background-size: 50px 50px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
   }
 }
 
-.properties__item--composition::before {
-  background-image: url("../img/advantage-powder@1x.png");
-  background-size: 50px 50px;
-}
+.properties__item--mealtimes {
+  &::after {
+    @media (min-width: $tablet-width) {
+      right: 77px;
+    }
 
-@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .properties__item--composition::before {
-    background-image: url("../img/advantage-powder@2x.png");
+    @media (min-width: $desktop-width) {
+      right: 0;
+    }
+  }
+
+  &::before {
+    background-image: url("../img/advantage-dining@1x.png");
+    background-size: 50px 50px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
   }
 }
 
-.properties__item--mealtimes::before {
-  background-image: url("../img/advantage-dining@1x.png");
-  background-size: 50px 50px;
-}
+.properties__item--period {
+  &::after {
+    @media (min-width: $tablet-width) {
+      right: 75px;
+    }
 
-@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .properties__item--mealtimes::before {
-    background-image: url("../img/advantage-dining@2x.png");
+    @media (min-width: $desktop-width) {
+      right: 0;
+    }
+  }
+
+  &::before {
+    background-image: url("../img/advantage-clock@1x.png");
+    background-size: 50px 50px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
   }
 }
 
-.properties__item--period::before {
-  background-image: url("../img/advantage-clock@1x.png");
-  background-size: 50px 50px;
-}
-
-@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .properties__item--period::before {
-    background-image: url("../img/advantage-clock@2x.png");
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .properties__text {
+.properties__text {
+  @media (min-width: $tablet-width) {
     margin-top: 112px;
     display: block;
     width: 250px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .properties__item--nutrients,
-  .properties__item--composition {
-    margin-top: 0;
   }
 }

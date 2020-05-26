@@ -3,23 +3,17 @@
   background-image: linear-gradient(to top, $background-color-tertiary 198px, transparent 198px), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center bottom, center bottom 198px;
-}
 
-@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .banner {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: linear-gradient(to top, $background-color-tertiary 198px, transparent 198px), url("../img/index-background-mobile@2x.jpg");
     background-size: 320px auto;
   }
-}
 
-@media (min-width: $tablet-width) {
-  .banner {
+  @media (min-width: $tablet-width) {
     background: none;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .banner {
+  @media (min-width: $desktop-width) {
     height: 628px;
     margin-bottom: 18px;
   }
@@ -31,19 +25,13 @@
   margin-right: 0;
   margin-bottom: 25px;
   margin-left: 0;
-  padding-top: 27px;
+  padding-top: 29px;
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 0;
   text-align: center;
-}
 
-.banner__title.title--lg {
-  line-height: 36px;
-}
-
-@media (min-width: $tablet-width) {
-  .banner__title {
+  @media (min-width: $tablet-width) {
     color: $color-primary--dark;
     max-width: 415px;
     text-align: left;
@@ -56,15 +44,17 @@
     order: 1;
   }
 
-  .banner__title.title--lg {
-    line-height: 60px;
+  @media (min-width: $desktop-width) {
+    padding-top: 93px;
+    padding-left: 80px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .banner__title {
-    padding-top: 93px;
-    padding-left: 80px;
+.banner__title.title--lg {
+  line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 60px;
   }
 }
 
@@ -83,10 +73,8 @@
   margin-left: 0;
   text-transform: uppercase;
   text-align: center;
-}
 
-@media (min-width: $tablet-width) {
-  .banner__desc {
+  @media (min-width: $tablet-width) {
     @include font($font-family-primary, 400, 20px, 20px, $color-primary--dark);
     text-align: left;
     padding-left: 88px;
@@ -96,10 +84,8 @@
     margin-left: 0;
     order: 2;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .banner__desc {
+  @media (min-width: $desktop-width) {
     padding-left: 79px;
     margin-top: 0;
     margin-right: 0;
@@ -113,10 +99,8 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 4px;
-}
 
-@media (min-width: $tablet-width) {
-  .banner__img {
+  @media (min-width: $tablet-width) {
     @include size(708px, 607px);
     order: 4;
     margin-top: -103px;
@@ -124,13 +108,7 @@
     margin-bottom: 3px;
   }
 
-  .banner__picture {
-    order: 4;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .banner__img {
+  @media (min-width: $desktop-width) {
     @include size(554px, 500px);
     margin: 0;
     position: absolute;
@@ -139,10 +117,28 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .banner__picture {
+    order: 4;
+  }
+}
+
 .banner__button {
   color: $color-secondary;
   width: 100%;
   margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    width: 245px;
+    margin-left: 89px;
+    order: 3;
+    z-index: 1;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
+  }
 }
 
 .banner__button.button {
@@ -151,28 +147,12 @@
   padding-right: 0;
   padding-bottom: 11px;
   font-size: 14px;
-}
 
-@media (min-width: $tablet-width) {
-  .banner__button {
-    width: 245px;
-    margin-left: 89px;
-    order: 3;
-    z-index: 1;
-    box-sizing: border-box;
-  }
-
-  .button.banner__button {
+  @media (min-width: $tablet-width) {
     padding-top: 17px;
     padding-right: 0px;
     padding-bottom: 17px;
     padding-left: 0px;
     font-size: 20px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .banner__button {
-    margin-left: 80px;
   }
 }

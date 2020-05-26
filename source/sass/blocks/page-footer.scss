@@ -5,6 +5,16 @@
   padding-bottom: 19px;
   padding-left: 0;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 61px;
+    padding-bottom: 0;
+    background-color: $background-color-secondary;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .page-footer--index {
@@ -12,60 +22,45 @@
   padding-right: 0;
   padding-bottom: 19px;
   padding-left: 0;
-}
 
-@media (min-width: $tablet-width) {
-  .page-footer {
-    padding-top: 61px;
-    padding-bottom: 0;
-    background-color: $background-color-secondary;
-  }
-
-  .page-footer--index {
+  @media (min-width: $tablet-width) {
     background-color: $background-color-tertiary;
+    padding-top: 63px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .page-footer {
-    padding-top: 0;
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
 .page-footer__top {
   margin-top: 0;
   margin-bottom: 39px;
-}
 
-@media (min-width: $tablet-width) {
-  .page-footer__top {
+  @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .page-footer__top {
+  @media (min-width: $desktop-width) {
     position: relative;
   }
 }
 
-@media (min-width: $tablet-width) {
-  .page-footer__bottom {
+.page-footer__bottom {
+  @media (min-width: $tablet-width) {
     background-color: $background-color-secondary;
     padding-top: 49px;
     padding-bottom: 40px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .page-footer__bottom {
+  @media (min-width: $desktop-width) {
     padding-top: 48px;
     padding-bottom: 36px;
   }
 }
 
-@media (min-width: $tablet-width) {
-  .page-footer__bottom-wrapper {
+.page-footer__bottom-wrapper {
+  @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,13 +71,20 @@
   display: block;
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   margin-left: 0;
   text-align: center;
-}
+  cursor: pointer;
 
-@media (min-width: $tablet-width) {
-  .page-footer__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active, &:focus {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
     margin: 0;
   }
 }
@@ -96,16 +98,23 @@
   border-bottom: 1px solid $border-gray--dark;
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 17px;
+  margin-bottom: 13px;
   margin-left: 0;
-}
 
-@media (min-width: $tablet-width) {
-  .page-footer__social {
+  @media (min-width: $tablet-width) {
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 32px;
     border: none;
+  }
+}
+
+.page-footer__copyright {
+  padding-top: 29px;
+  padding-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
   }
 }
