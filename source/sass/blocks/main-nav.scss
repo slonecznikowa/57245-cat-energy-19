@@ -17,22 +17,27 @@
   &:active {
     background-color: transparent;
   }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.main-nav--closed .main-nav__toggle {
+  &::before {
+    @include pseudo;
+    top: 0;
+    left: 0;
 
-  @include size(24px, 2px);
-  background-color: #000000;
-  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
-}
+    @include size(24px, 2px);
+    background-color: $background-color-fourth;
+    box-shadow: 0 8px 0 0 $background-color-fourth, 0 16px 0 0 $background-color-fourth;
+  }
 
-.main-nav--closed .main-nav__toggle:active::before {
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+  &:active::before {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+  }
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -40,12 +45,11 @@
 
   &::before,
   &::after {
-    content: "";
-    position: absolute;
+    @include pseudo;
     left: 0;
 
     @include size(24px, 2px);
-    background-color: #000000;
+    background-color: $background-color-fourth;
   }
 
   &::before {
@@ -63,6 +67,21 @@
   }
 }
 
+.main-nav--closed .main-nav__list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 440px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 480px;
+  }
+}
+
 .main-nav--nojs .main-nav__toggle {
   display: none;
 }
@@ -76,33 +95,8 @@
   display: block;
 }
 
-.main-nav--nojs .menu-list__item--active a {
-  color: red;
-}
-
-.main-nav--closed .main-nav__list {
-  display: none;
-}
-
-@media (min-width: $tablet-width) {
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav--closed .main-nav__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 440px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .main-nav {
+.main-nav {
+  @media (min-width: $desktop-width) {
     z-index: 1;
-  }
-
-  .main-nav--closed .main-nav__list {
-    width: 480px;
   }
 }

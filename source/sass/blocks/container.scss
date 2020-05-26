@@ -1,20 +1,16 @@
 .container {
   display: block;
-  width: 280px; /*Либо auto если макет резиновый*/
+  width: 280px;
   padding: 0 20px;
-  margin: 0 auto; /*Временно для выравнивания контейнера фиксированной ширины по центру*/
-}
+  margin: 0 auto;
 
-@media (min-width: $tablet-width) {
-  .container {
-    width: 708px; /*Либо auto если макет резиновый*/
+  @media (min-width: $tablet-width) {
+    width: 708px;
     padding: 0 30px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .container {
-    width: 1220px; /*Либо auto если макет резиновый*/
+  @media (min-width: $desktop-width) {
+    width: 1220px;
     padding: 0 40px;
   }
 }

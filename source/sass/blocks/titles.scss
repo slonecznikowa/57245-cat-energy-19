@@ -1,16 +1,13 @@
 .title {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
-  color: green;
 }
 
 .title--lg {
   font-size: 36px;
   line-height: 60px;
-}
 
-@media (min-width: $tablet-width) {
-  .title--lg {
+  @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
   }
@@ -19,10 +16,8 @@
 .title--md {
   font-size: 24px;
   line-height: 24px;
-}
 
-@media (min-width: $tablet-width) {
-  .title--md {
+  @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
   }
@@ -31,10 +26,8 @@
 .title--sm {
   font-size: 16px;
   line-height: 16px;
-}
 
-@media (min-width: $tablet-width) {
-  .title--sm {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
   }

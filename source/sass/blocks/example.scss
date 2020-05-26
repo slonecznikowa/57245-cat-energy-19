@@ -1,53 +1,48 @@
 .example {
   background: $background-color-secondary;
-  padding: 17px 20px 14px 20px;
+  padding-top: 17px;
+  padding-right: 20px;
+  padding-bottom: 14px;
+  padding-left: 20px;
   margin-top: 40px;
-}
 
-@media (min-width: $tablet-width) {
-  .example {
+  @media (min-width: $tablet-width) {
     background-color: $background-color-tertiary;
     padding: 0;
     margin-top: 44px;
   }
 
-  .example .example__column:first-child {
-    width: 708px;
-    padding: 0 30px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .example {
+  @media (min-width: $desktop-width) {
     margin-top: 22px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     height: 650px;
-    background: linear-gradient(to right, #f2f2f2 75%, #eaeaea 75%);
+    background: linear-gradient(to right, $background-color-secondary 75%, $background-color-secondary--light 75%);
     position: relative;
 
     &::before {
-      content: "";
-      position: absolute;
-      display: block;
+      @include pseudo;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 188px;
-      background-color: #ffffff;
+
+      @include size(100%, 188px);
+      background-color: $background-color-tertiary;
     }
   }
+}
 
-  .example__column {
-    width: 650px;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+.example .example__column:first-child {
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    padding-top: 0;
+    padding-right: 30px;
+    padding-bottom: 0;
+    padding-left: 30px;
+    margin: 0 auto;
   }
 
-  .example .example__column:first-child {
+  @media (min-width: $desktop-width) {
     width: 650px;
     box-sizing: border-box;
     padding: 0;
@@ -56,24 +51,30 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .example__column {
+    width: 650px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 .example__title {
   color: $color-primary--dark;
   margin-top: 0;
   margin-bottom: 23px;
-}
 
-@media (min-width: $tablet-width) {
-  .example__title {
+  @media (min-width: $tablet-width) {
     margin-bottom: 64px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .example__title {
+  @media (min-width: $desktop-width) {
     position: relative;
     z-index: 1;
-    padding: 0 40px;
     padding-top: 52px;
+    padding-right: 40px;
+    padding-bottom: 0;
     padding-left: 0;
     box-sizing: border-box;
     background: $background-color-tertiary;
@@ -85,16 +86,12 @@
   margin-top: 0;
   margin-bottom: 25px;
   padding-right: 14px;
-}
 
-@media (min-width: $tablet-width) {
-  .example__desc {
+  @media (min-width: $tablet-width) {
     margin-bottom: 53px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .example__desc {
+  @media (min-width: $desktop-width) {
     max-width: 435px;
     padding-left: 0;
     margin-bottom: 0;
@@ -107,17 +104,13 @@
   justify-content: space-between;
   text-align: center;
   margin-bottom: 34px;
-}
 
-@media (min-width: $tablet-width) {
-  .example__stats {
+  @media (min-width: $tablet-width) {
     margin-bottom: 87px;
     padding: 0;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .example__stats {
+  @media (min-width: $desktop-width) {
     margin-bottom: 0;
   }
 }
@@ -127,15 +120,19 @@
   border: 1px solid $border-gray--darken;
   border-radius: 3px;
   position: relative;
-  padding: 12px 0 18px 0;
+  padding-top: 12px;
+  padding-right: 0;
+  padding-bottom: 18px;
+  padding-left: 0;
   box-sizing: border-box;
-}
 
-@media (min-width: $tablet-width) {
-  .example__stats-item {
+  @media (min-width: $tablet-width) {
     width: 162px;
     margin-right: 42px;
-    padding: 18px 0 22px 0;
+    padding-top: 18px;
+    padding-right: 0;
+    padding-bottom: 22px;
+    padding-left: 0;
   }
 }
 
@@ -143,10 +140,8 @@
   @include font($font-family-secondary, 400, 24px, 1, $color-primary--dark);
   display: block;
   text-transform: uppercase;
-}
 
-@media (min-width: $tablet-width) {
-  .example__stats-value {
+  @media (min-width: $tablet-width) {
     font-size: 30px;
   }
 }
@@ -160,10 +155,8 @@
   max-width: 80px;
   margin-left: calc(-80px / 2);
   background: $background-color-secondary;
-}
 
-@media (min-width: $tablet-width) {
-  .example__stats-field {
+  @media (min-width: $tablet-width) {
     font-size: 14px;
     background-color: $background-color-tertiary;
     width: 130px;
@@ -171,10 +164,8 @@
     margin-left: calc(-130px / 2);
     bottom: -6px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .example__stats-field {
+  @media (min-width: $desktop-width) {
     background-color: $background-color-secondary;
   }
 }
@@ -185,40 +176,36 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 36px;
-}
 
-@media (min-width: $tablet-width) {
-  .example__expenses {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     max-width: 175px;
     text-align: right;
     margin-top: 7px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .example__expenses {
+  @media (min-width: $desktop-width) {
     max-width: inherit;
     text-align: left;
     margin-top: 56px;
     margin-bottom: 50px;
   }
+}
 
-  .example__price {
+.example__price {
+  @media (min-width: $desktop-width) {
     margin-left: 59px;
   }
 }
 
-@media (min-width: $tablet-width) {
-  .example__stats-wrapper {
+.example__stats-wrapper {
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .example__stats-wrapper {
+  @media (min-width: $desktop-width) {
     flex-direction: column;
     width: 405px;
     padding-left: 0;
@@ -226,20 +213,20 @@
   }
 }
 
-@media (min-width: $tablet-width) {
-  .example__wrapper {
+.example__wrapper {
+  @media (min-width: $tablet-width) {
     position: relative;
   }
 
-  .example__wrapper::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 167px;
-    background-color: $background-color-tertiary;
-    z-index: 3;
+  &::before {
+    @media (min-width: $tablet-width) {
+      @include pseudo;
+      top: 0;
+      left: 0;
+
+      @include size(100%, 167px);
+      background-color: $background-color-tertiary;
+      z-index: 3;
+    }
   }
 }

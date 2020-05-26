@@ -2,15 +2,17 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  padding: 10px 22px;
+  padding-top: 10px;
+  padding-right: 22px;
+  padding-bottom: 10px;
+  padding-left: 22px;
   box-sizing: border-box;
   display: inline-block;
+  cursor: pointer;
 
   @include font($font-family-primary, 400, 16px, 18px, $color-secondary);
-}
 
-@media (min-width: $tablet-width) {
-  .button {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
   }
@@ -18,8 +20,28 @@
 
 .button--green {
   background-color: $background-color-primary;
+
+  &:hover {
+    background-color: $button-hover-primary;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $button-hover-primary;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--grey {
   background-color: $background-color-secondary;
+
+  &:hover {
+    background-color: $button-hover-secondary;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $button-hover-primary;
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
