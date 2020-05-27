@@ -420,6 +420,11 @@
   &:invalid {
     border: 2px solid $color-error;
   }
+
+  &:focus:invalid {
+    border: 1px solid $border-grayish;
+    outline: none;
+  }
 }
 
 .form-main__input-icon {
@@ -507,6 +512,16 @@
   background-color: rgba(104, 183, 56, 0.3);
 }
 
+
+.form-main__input--radiobutton:focus + .form-main__label--radiobutton {
+  color: rgba(34, 34, 34, 0.3);
+  outline: none;
+}
+
+.form-main__input--radiobutton:focus + .form-main__label--radiobutton::before {
+  border: 1px solid rgba(186, 186, 186, 0.3);
+}
+
 .form-main__group-textarea {
   @include size(280px, 150px);
   resize: none;
@@ -555,6 +570,10 @@
 
   &:invalid {
     border: 2px solid $color-error;
+  }
+
+  &:focus:invalid {
+    border: 1px solid $border-grayish;
   }
 }
 
@@ -611,6 +630,15 @@
 
 .form-main__input--checkbox:checked + .form-main__label--checkbox:active::before {
   background-image: url("../img/icon-tick-active.svg");
+}
+
+.form-main__input--checkbox:focus + .form-main__label--checkbox {
+  color: rgba(34, 34, 34, 0.3);
+  outline: none;
+}
+
+.form-main__input--checkbox:focus + .form-main__label--checkbox:before {
+  border: 1px solid rgba(186, 186, 186, 0.3);
 }
 
 .form-main__wrapper-button {
@@ -691,12 +719,4 @@
 .form-main__input[type="email"]:invalid + svg,
 .form-main__input[type="tel"]:invalid + svg {
   fill: $color-error;
-}
-
-.form-main__input--radiobutton:focus + .form-main__label--radiobutton {
-  color: rgba(34, 34, 34, 0.3);
-}
-
-.form-main__input--checkbox:focus + .form-main__label--checkbox {
-  color: rgba(34, 34, 34, 0.3);
 }

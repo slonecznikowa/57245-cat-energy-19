@@ -211,7 +211,7 @@
     &:active,
     &:focus {
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
-      border: 2px solid #68b738;
+      border: 2px solid rgb(104, 183, 56);
     }
   }
 
@@ -287,7 +287,14 @@
   }
 }
 
-.slider__input:checked:focus + .slider__label .slider__switch,
-.slider__input:checked:hover + .slider__label .slider__switch {
-  background-color: $background-color-tertiary;
+@media (min-width: $tablet-width) {
+  .slider__input:checked:focus + .slider__label .slider__switch,
+  .slider__input:checked:hover + .slider__label .slider__switch {
+    background-color: $background-color-tertiary;
+  }
+
+  .slider__input:focus + .slider__switch {
+    box-shadow: 0px 4px 5px 0 rgba(0, 0, 0, 0.3);
+    border: 2px solid rgb(104, 183, 56);
+  }
 }
