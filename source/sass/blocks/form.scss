@@ -520,6 +520,7 @@
 
 .form-main__input--radiobutton:focus + .form-main__label--radiobutton::before {
   border: 1px solid rgba(186, 186, 186, 0.3);
+  opacity: 0.3;
 }
 
 .form-main__group-textarea {
@@ -639,6 +640,7 @@
 
 .form-main__input--checkbox:focus + .form-main__label--checkbox::before {
   border: 1px solid rgba(186, 186, 186, 0.3);
+  opacity: 0.3;
 }
 
 .form-main__wrapper-button {
@@ -709,14 +711,16 @@
   }
 }
 
-.form-main__input[type="email"]:active + svg,
-.form-main__input[type="email"]:focus + svg,
-.form-main__input[type="tel"]:active + svg,
-.form-main__input[type="tel"]:focus + svg {
-  fill: rgb(104, 183, 56);
-}
-
 .form-main__input[type="email"]:invalid + svg,
 .form-main__input[type="tel"]:invalid + svg {
   fill: $color-error;
+}
+
+.form-main__input[type="email"]:active + svg,
+.form-main__input[type="email"]:focus + svg,
+.form-main__input[type="email"]:focus:invalid + svg,
+.form-main__input[type="tel"]:active + svg,
+.form-main__input[type="tel"]:focus + svg,
+.form-main__input[type="tel"]:focus:invalid + svg {
+  fill: rgb(104, 183, 56);
 }
