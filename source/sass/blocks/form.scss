@@ -83,6 +83,10 @@
   }
 }
 
+.form-main__group--data .form-main__label {
+  white-space: nowrap;
+}
+
 .form-main__group--contacts {
   padding: 0;
   margin-top: 29px;
@@ -118,6 +122,10 @@
       background-color: $background-color-primary;
     }
   }
+}
+
+.form-main__group--contacts .form-main__label {
+  white-space: nowrap;
 }
 
 .form-main__group--comments {
@@ -360,7 +368,6 @@
   @include font($font-family-secondary, 400, 16px, 18px, $color-primary--darken);
   text-transform: uppercase;
   margin-right: 15px;
-  flex-shrink: 0;
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -569,12 +576,14 @@
     @include size(30px, 30px);
     box-sizing: border-box;
     border: 1px solid $border-gray--darken;
-    top: 2px;
+    top: 50%;
+    margin-top: -15px;
     left: 0;
 
     @media (min-width: $tablet-width) {
       @include size(40px, 40px);
-      top: -5px;
+      top: 50%;
+      margin-top: -20px;
     }
   }
 
@@ -682,4 +691,12 @@
 .form-main__input[type="email"]:invalid + svg,
 .form-main__input[type="tel"]:invalid + svg {
   fill: $color-error;
+}
+
+.form-main__input--radiobutton:focus + .form-main__label--radiobutton {
+  color: rgba(34, 34, 34, 0.3)
+}
+
+.form-main__input--checkbox:focus + .form-main__label--checkbox {
+  color: rgba(34, 34, 34, 0.3)
 }
